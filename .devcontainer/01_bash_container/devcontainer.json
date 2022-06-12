@@ -3,8 +3,8 @@
 {
 	"name": "Ubuntu",
 	"build": {
-		"dockerfile": "../../01_bash_container/Dockerfile",
-		"context": "../../01_bash_container",
+		"dockerfile": "../../01_bash_container/.devcontainer/Dockerfile",
+		"context": "../../01_bash_container/.devcontainer",
 		// Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
 		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
 		"args": { "VARIANT": "ubuntu-22.04" }
@@ -14,8 +14,10 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "uname -a",
+	"postCreateCommand": "../../01_bash_container/.devcontainer/postCreateCommand.sh",
 
+
+		
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
 	"features": {

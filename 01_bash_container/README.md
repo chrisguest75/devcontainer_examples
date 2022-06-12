@@ -14,11 +14,19 @@ TODO:
 
 ## Example
 
+Based on my examples from shell_examples:
+
+* [13_bats](https://github.com/chrisguest75/shell_examples/tree/master/13_bats)  
+* [13_bats_mock](https://github.com/chrisguest75/shell_examples/tree/master/13_bats_mock)  
+* [21_nice_prompt](https://github.com/chrisguest75/docker_examples/tree/master/21_nice_prompt)  
+
 ```sh
 cd ./01_bash_container
 echo $DEVCONTAINER_TYPE
 ./hello-world.sh
 ```
 
-## Resources 
+Follow steps in [13_bats](./13_bats/README.md)  
+
+## Resources
 

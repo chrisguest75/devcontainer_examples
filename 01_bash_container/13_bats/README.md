@@ -32,9 +32,9 @@ which bats
 # show symlink
 ls -al /usr/local/bin/bats   
 # show installed files
-ls -la /usr/local/Cellar/bats-core/1.6.0
+ls -la /usr/local/Cellar/bats-core/1.7.0
 # cat readme
-cat /usr/local/Cellar/bats-core/1.6.0/README.md     
+cat /usr/local/Cellar/bats-core/1.7.0/README.md     
 ```
 
 ## Running tests (in shell)
@@ -51,13 +51,6 @@ bats -t ./test/tests.bats --formatter junit -T
 export DEBUG_BATS=true  
 bats -t test/tests.bats 
 unset DEBUG_BATS
-```
-
-## Running tests (in docker)
-
-```sh
-docker run -it bats/bats:1.6.0 --version
-docker run -it -v $(pwd):/mnt --workdir /mnt bats/bats:1.6.0 test/tests.bats         
 ```
 
 ## Resources

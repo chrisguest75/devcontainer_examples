@@ -16,6 +16,7 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 TODO:
 
 * Ability to clone other repos into the workspace
+* Build github actions for each container
 * Passing secrets into the container
 * How does a local build work with monorepo config?
 * Setup my dotfiles in a remote container
