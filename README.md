@@ -20,7 +20,9 @@ TODO:
 * bash development with shellcheck etc
 * Typescript dev
 * monorepos
+* default vscode extensions
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
+* docker caching?
 
 ## Getting started
 
@@ -33,6 +35,11 @@ code --install-extension ms-vscode-remote.remote-containers
 
 Use `⌘ + ^ + p` and "Try a development Container Sample"
 
+Use `⌘ + ^ + p` and "Add development container configuration files"
+
+Select Ubuntu and follow options
+
+
 ## 01 - Simple setup for bash development
 
 
@@ -41,6 +48,8 @@ Steps [README.md](./00_cheatsheet/README.md)
 
 ## Resources
 
-* devcontainers  https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/
+* https://containers.dev/
+* https://containers.dev/implementors/json_reference/
+* devcontainers and monorepos https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/
 
 * cli https://code.visualstudio.com/docs/remote/devcontainer-cli
