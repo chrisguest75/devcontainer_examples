@@ -19,7 +19,6 @@ TODO:
 * Build github actions for each container
 * How does a local build work with monorepo config?
 * Setup my dotfiles in a remote container
-* Typescript dev - hygen example
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
 * docker caching?
 

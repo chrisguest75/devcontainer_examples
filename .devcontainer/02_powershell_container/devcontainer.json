@@ -6,8 +6,8 @@
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
-	// Uncomment the next line to run commands after the container is created. This gets run in bash which is why we call `pwsh`.
-	// "postCreateCommand": "pwsh -c '$PSVersionTable'",
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash ./02_powershell_container/.devcontainer/postCreateCommand.sh",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
@@ -15,8 +15,8 @@
 		"args": {
 			"UPGRADE_PACKAGES": "true"
 		},
-		"dockerfile": "../../02_powershell_container/Dockerfile",
-		"context": "../../02_powershell_container"		
+		"dockerfile": "../../02_powershell_container/.devcontainer/Dockerfile",
+		"context": "../../02_powershell_container/.devcontainer"		
 	},
 	"containerEnv": { 
 		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
@@ -40,7 +40,6 @@
 				"oderwat.indent-rainbow",
 				"DavidAnson.vscode-markdownlint",
 				"dbaeumer.vscode-eslint"
-
 			]
 		}
 	},
