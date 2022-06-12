@@ -33,9 +33,20 @@
 				"timonwong.shellcheck",
 				"DavidAnson.vscode-markdownlint"
 			]
+		},
+		"codespaces": {
+			"repositories": {
+				"chrisguest75/shell_examples": {
+					"permissions": "read-all"
+				},
+				"chrisguest75/typescript_examples": {
+					"permissions": "read-all"
+				}
+			}
 		}
 	},
 	"containerEnv": { 
+		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
 		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
 		"DEVCONTAINER_TYPE": "01_bash_container" 
 	}
