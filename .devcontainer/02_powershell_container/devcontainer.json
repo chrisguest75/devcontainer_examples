@@ -3,22 +3,6 @@
 {
 	"name": "PowerShell",
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Set *default* container specific settings.json values on container create.
-			"settings": { 
-				"terminal.integrated.defaultProfile.linux": "pwsh"
-			},
-			
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"ms-vscode.powershell"
-			]
-		}
-	},
-
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
@@ -33,5 +17,31 @@
 		},
 		"dockerfile": "../../02_powershell_container/Dockerfile",
 		"context": "../../02_powershell_container"		
+	},
+	"containerEnv": { 
+		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
+		"DEVCONTAINER_TYPE": "02_powershell_container" 
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+				"terminal.integrated.defaultProfile.linux": "pwsh"
+			},
+			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-vscode.powershell",
+				"ms-azuretools.vscode-docker",
+				"ms-vsliveshare.vsliveshare",
+				"oderwat.indent-rainbow",
+				"DavidAnson.vscode-markdownlint",
+				"dbaeumer.vscode-eslint"
+
+			]
+		}
 	}
+
 }

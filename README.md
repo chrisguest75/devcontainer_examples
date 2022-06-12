@@ -13,39 +13,40 @@ The Remote - Containers extension lets you use a Docker container as a full-feat
 
 Based on my examples from docker_examples [41_remote_containers](https://github.com/chrisguest75/docker_examples/tree/master/41_remote_containers) and [41_nodejs_remote_devcontainer](https://github.com/chrisguest75/docker_examples/tree/master/41_nodejs_remote_devcontainer).  
 
-
 TODO:
 
+* Ability to clone other repos into the workspace
+* Passing secrets into the container
 * How does a local build work with monorepo config?
 * Setup my dotfiles in a remote container
-* bash development with shellcheck etc
-* Typescript dev
-* monorepos
-* default vscode extensions
+* Typescript dev - hygen example
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
 * docker caching?
-* 
 
 ## Getting started
 
 ```sh
-# install the extension
+# install the extension (this is not required on codespaces)
 code --install-extension ms-vscode-remote.remote-containers
 ```
 
-
-
-Use `⌘ + ^ + p` and "Try a development Container Sample"
-
-Use `⌘ + ^ + p` and "Add development container configuration files"
+* Use `⌘ + ^ + p` and "Try a development Container Sample"
+* Use `⌘ + ^ + p` and "Add development container configuration files"
 
 Select Ubuntu and follow options
 
-
-## 01 - Simple setup for bash development
+## 01 - bash development example
 
 Demonstrate a simple bash container with `shellcheck` added.  
 Steps [README.md](./01_bash_container/README.md)  
+
+## 02 - powershell development example
+
+Steps [README.md](./02_powershell_container/README.md)  
+
+## 03 - typescript development example
+
+Steps [README.md](./03_typescript_container/README.md)  
 
 ## Resources
 
