@@ -20,5 +20,24 @@
 	"remoteUser": "vscode",
 	"features": {
 		"git": "latest"
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-vsliveshare.vsliveshare",
+				"ms-vscode-remote.remote-containers",
+				"oderwat.indent-rainbow",
+				"timonwong.shellcheck"
+			]
+		}
+	},
+	"containerEnv": { 
+		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
+		"DEVCONTAINER_TYPE": "01_bash_container" 
 	}
+
 }
