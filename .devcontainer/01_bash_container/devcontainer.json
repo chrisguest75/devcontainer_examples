@@ -41,6 +41,9 @@
 				},
 				"chrisguest75/typescript_examples": {
 					"permissions": "read-all"
+				},
+				"chrisguest75/docker_examples": {
+					"permissions": "read-all"
 				}
 			}
 		}
