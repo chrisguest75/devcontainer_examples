@@ -2,7 +2,6 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/powershell
 {
 	"name": "PowerShell",
-	"dockerFile": "Dockerfile",
 
 	// Configure tool-specific properties.
 	"customizations": {
