@@ -44,14 +44,12 @@ Select Ubuntu and follow options
 
 ## 01 - Simple setup for bash development
 
-
-Steps [README.md](./00_cheatsheet/README.md)  
-
+Demonstrate a simple bash container with `shellcheck` added.  
+Steps [README.md](./01_bash_container/README.md)  
 
 ## Resources
 
-* https://containers.dev/
-* https://containers.dev/implementors/json_reference/
-* devcontainers and monorepos https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/
-
+* [containers.dev](https://containers.dev/)
+* devcontainers.json [json_reference](https://containers.dev/implementors/json_reference/)
+* codespaces-multi-repository-monorepo-scenarios [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)
 * cli https://code.visualstudio.com/docs/remote/devcontainer-cli

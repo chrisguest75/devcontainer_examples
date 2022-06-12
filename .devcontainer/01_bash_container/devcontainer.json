@@ -31,7 +31,8 @@
 				"ms-vsliveshare.vsliveshare",
 				"ms-vscode-remote.remote-containers",
 				"oderwat.indent-rainbow",
-				"timonwong.shellcheck"
+				"timonwong.shellcheck",
+				"DavidAnson.vscode-markdownlint"
 			]
 		}
 	},
