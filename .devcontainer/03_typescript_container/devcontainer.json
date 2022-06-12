@@ -13,7 +13,7 @@
 		}
 	},
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "./03_typescript_container/.devcontainer/postCreateCommand.sh",
+	"postCreateCommand": "bash ./03_typescript_container/.devcontainer/postCreateCommand.sh",
 
 	// Configure tool-specific properties.
 	"customizations": {

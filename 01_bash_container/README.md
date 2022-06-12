@@ -7,10 +7,12 @@ Demonstrates:
 * environment variables
 * vscode extensions
 * packages installed into the container
+* postCreateCommand
 
-TODO:
+NOTES:
 
-* oh-my-bash
+* `oh-my-zsh` is installed by default.  In bash type `zsh`.
+* home folder is `/home/vscode`
 
 ## Example
 
@@ -27,6 +29,18 @@ echo $DEVCONTAINER_TYPE
 ```
 
 Follow steps in [13_bats](./13_bats/README.md)  
+
+```sh
+cd ./13_bats
+./configures.sh
+```
+
+Follow steps in [18_bats_mock](./18_bats_mock/README.md)  
+
+```sh
+cd ./18_bats_mock
+./configures.sh
+```
 
 ## Resources
 

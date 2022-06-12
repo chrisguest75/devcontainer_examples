@@ -14,7 +14,7 @@ docker exec -it nice_prompt /bin/zsh
 
 # modify the configs (zsh)
 cp ~/.zshrc ~/.zshrc.bak
-cat ~/.zshrc.bak | sed 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' > ~/.zshrc
+cat ~/.zshrc.bak | sed 's/ZSH_THEME="codespaces"/ZSH_THEME="agnoster"/g' > ~/.zshrc
 
 # modify the configs (bash)
 cp ~/.bashrc ~/.bashrc.bak
