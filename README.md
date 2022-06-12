@@ -16,6 +16,7 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 
 TODO:
 
+* How does a local build work with monorepo config?
 * Setup my dotfiles in a remote container
 * bash development with shellcheck etc
 * Typescript dev
@@ -23,6 +24,7 @@ TODO:
 * default vscode extensions
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
 * docker caching?
+* 
 
 ## Getting started
 
