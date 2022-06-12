@@ -17,7 +17,7 @@ TODO:
 
 * Ability to clone other repos into the workspace
 * Build github actions for each container
-* How does a local build work with monorepo config?
+* How does a local build work with monorepo config?  vscode extension - GitHub.codespaces
 * Setup my dotfiles in a remote container
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
 * docker caching?
@@ -37,6 +37,11 @@ Select Ubuntu and follow options
 ```sh
 npm install -g @vscode/dev-container-cli  
 devcontainer build ./.devcontainer/01_bash_container  
+```
+
+```sh
+# github codespaces extension
+code --install-extension GitHub.codespaces
 ```
 
 ## 01 - bash development example
