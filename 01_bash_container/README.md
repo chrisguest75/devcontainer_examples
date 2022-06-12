@@ -44,3 +44,5 @@ cd ./18_bats_mock
 
 ## Resources
 
+* codespaces-multi-repository-monorepo-scenarios [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)
+* https://code.visualstudio.com/docs/editor/integrated-terminal

@@ -10,6 +10,15 @@
 		"args": { "VARIANT": "ubuntu-22.04" }
 	},
 
+	"settings": { 
+		"terminal.integrated.profiles.linux": {
+			"My Zsh": {
+			  "path": "/bin/zsh"
+			}
+		  },
+		  "terminal.integrated.defaultProfile.linux": "My Zsh"		
+	},
+
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
@@ -24,7 +33,7 @@
 		"homebrew": "latest"
 	},
 	// Configure tool-specific properties.
-	"customizations": {
+	"customizations": {		
 		// Configure properties specific to VS Code.
 		"vscode": {			
 			// Add the IDs of extensions you want installed when the container is created.
