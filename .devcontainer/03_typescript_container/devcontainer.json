@@ -3,16 +3,18 @@
 {
 	"name": "Node.js & TypeScript",
 	"build": {
-		"dockerfile": "../../03_typescript_container/Dockerfile",
-		"context": "../../03_typescript_container",
+		"dockerfile": "../../03_typescript_container/.devcontainer/Dockerfile",
+		"context": "../../03_typescript_container/.devcontainer",
 		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
 		// Append -bullseye or -buster to pin to an OS version.
 		// Use -bullseye variants on local on arm64/Apple Silicon.
 		"args": { 
 			"VARIANT": "16-bullseye"
 		}
-
 	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "./03_typescript_container/.devcontainer/postCreateCommand.sh",
+
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -44,7 +46,8 @@
 	"remoteUser": "node",
 	"features": {
 		"git": "latest",
-		"github-cli": "latest"
+		"github-cli": "latest",
+		"homebrew": "latest"
 	},
 	"codespaces": {
 		"repositories": {
