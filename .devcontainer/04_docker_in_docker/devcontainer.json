@@ -1,0 +1,47 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/docker-in-docker
+{
+	"name": "Docker in Docker",
+	"build": {
+		"dockerfile": "../../04_docker_in_docker/Dockerfile",
+		"context": "../../04_docker_in_docker",
+		"args": {
+			"UPGRADE_PACKAGES": "true"
+		}
+	},
+	"runArgs": ["--init", "--privileged"],
+	"mounts": ["source=dind-var-lib-docker,target=/var/lib/docker,type=volume"],
+	"overrideCommand": false,
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-vsliveshare.vsliveshare",
+				"oderwat.indent-rainbow",
+				"timonwong.shellcheck",
+				"DavidAnson.vscode-markdownlint",
+				"dbaeumer.vscode-eslint"
+
+			]
+		}
+	},
+	
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "docker --version",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode",
+	"features": {
+		"docker-in-docker": "latest",
+		"git": "latest",
+		"github-cli": "latest",
+		"homebrew": "latest"
+	}
+}

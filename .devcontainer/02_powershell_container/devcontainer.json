@@ -19,6 +19,7 @@
 		"context": "../../02_powershell_container"		
 	},
 	"containerEnv": { 
+		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
 		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
 		"DEVCONTAINER_TYPE": "02_powershell_container" 
 	},
@@ -42,6 +43,12 @@
 
 			]
 		}
+	},
+	"codespaces": {
+		"repositories": {
+			"chrisguest75/powershell_examples": {
+				"permissions": "read-all"
+			}
+		}
 	}
-
 }

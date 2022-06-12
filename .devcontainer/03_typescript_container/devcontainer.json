@@ -29,6 +29,7 @@
 		}
 	},
 	"containerEnv": { 
+		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
 		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
 		"DEVCONTAINER_TYPE": "03_typescript_container" 
 	},
@@ -44,5 +45,19 @@
 	"features": {
 		"git": "latest",
 		"github-cli": "latest"
+	},
+	"codespaces": {
+		"repositories": {
+			"chrisguest75/shell_examples": {
+				"permissions": "read-all"
+			},
+			"chrisguest75/typescript_examples": {
+				"permissions": "read-all"
+			},
+			"chrisguest75/docker_examples": {
+				"permissions": "read-all"
+			}
+		}
 	}
+
 }
