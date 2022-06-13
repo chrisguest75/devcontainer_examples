@@ -1,6 +1,6 @@
 # README
 
-Demonstrate docker in docker builds.  
+Demonstrate `docker in docker` builds in a devcontainer.  
 
 Demonstrates:
 

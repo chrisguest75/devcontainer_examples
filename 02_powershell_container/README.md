@@ -1,14 +1,14 @@
 # README
 
-Demonstrate a simple powershell container
+Demonstrate a simple `powershell` devcontainer
 
 Demonstrates:
 
-* 
+* installing powershell
 
 TODO:
 
-* 
+* add oh-my-posh
 
 ## Example
 
@@ -16,5 +16,4 @@ TODO:
 echo $DEVCONTAINER_TYPE
 ```
 
-## Resources 
-
+## Resources

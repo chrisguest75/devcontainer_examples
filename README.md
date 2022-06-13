@@ -20,7 +20,8 @@ TODO:
 * How does a local build work with monorepo config?  vscode extension - GitHub.codespaces
 * Setup my dotfiles in a remote container
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
-* docker caching?
+* docker caching - to speed up build
+* build a cutom powershell jupyter build container
 
 ## Getting started
 
@@ -44,6 +45,17 @@ devcontainer build ./.devcontainer/01_bash_container
 code --install-extension GitHub.codespaces
 ```
 
+## github cli
+
+```sh
+export PAGER=
+
+gh codespace
+
+# on the list it displays the real created time
+gh codespace list
+```
+
 ## 01 - bash development example
 
 Demonstrate a simple bash container with `shellcheck` added.  
@@ -51,21 +63,28 @@ Steps [README.md](./01_bash_container/README.md)
 
 ## 02 - powershell development example
 
+Demonstrate a simple `powershell` devcontainer  
 Steps [README.md](./02_powershell_container/README.md)  
 
 ## 03 - typescript development example
 
-Demonstrate a typescript build environment  
+Demonstrate a `typescript` build environment in a devcontainer  
 Steps [README.md](./03_typescript_container/README.md)  
 
 ## 04 - docker in docker example
 
+Demonstrate `docker in docker` builds in a devcontainer.  
 Steps [README.md](./04_docker_in_docker/README.md)  
+
+## 05 - jupyter example
+
+Demonstrate jupyter in a `devcontainer`.  
+Steps [README.md](./05_jupyter/README.md)  
 
 ## Resources
 
 * [containers.dev](https://containers.dev/)
 * devcontainers.json [json_reference](https://containers.dev/implementors/json_reference/)
-* codespaces-multi-repository-monorepo-scenarios [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)
-* cli https://code.visualstudio.com/docs/remote/devcontainer-cli
+* codespaces-multi-repository-monorepo-scenarios blog [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)
+* devcontainer-cli [here](https://code.visualstudio.com/docs/remote/devcontainer-cli)  
 * https://notes.alexkehayias.com/github-codespaces-is-too-slow-and-expensive-to-replace-local-development/

@@ -1,6 +1,6 @@
 # README
 
-Demonstrate jupyter.  
+Demonstrate jupyter in a `devcontainer`.  
 
 Demonstrates:
 

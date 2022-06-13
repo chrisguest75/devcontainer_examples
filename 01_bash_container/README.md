@@ -8,10 +8,11 @@ Demonstrates:
 * vscode extensions
 * packages installed into the container
 * postCreateCommand
+* overriding default shell from bash to zsh
 
 NOTES:
 
-* `oh-my-zsh` is installed by default.  In bash type `zsh`.
+* `oh-my-zsh` is installed by default.
 * home folder is `/home/vscode`
 
 ## Example

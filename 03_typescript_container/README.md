@@ -1,10 +1,10 @@
 # README
 
-Demonstrate a typescript build environment
+Demonstrate a `typescript` build environment in a devcontainer
 
 Demonstrates:
 
-* 
+*  
 
 TODO:
 
