@@ -32,17 +32,17 @@ Follow steps in [13_bats](./13_bats/README.md)
 
 ```sh
 cd ./13_bats
-./configures.sh
+./configure.sh
 ```
 
 Follow steps in [18_bats_mock](./18_bats_mock/README.md)  
 
 ```sh
 cd ./18_bats_mock
-./configures.sh
+./configure.sh
 ```
 
 ## Resources
 
-* codespaces-multi-repository-monorepo-scenarios [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)
-* https://code.visualstudio.com/docs/editor/integrated-terminal
+* codespaces-multi-repository-monorepo-scenarios blog [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)  
+* integrated-terminal config [here](https://code.visualstudio.com/docs/editor/integrated-terminal)  

@@ -2,7 +2,13 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/powershell
 {
 	"name": "PowerShell",
-
+	"build": {
+		"args": {
+			"UPGRADE_PACKAGES": "true"
+		},
+		"dockerfile": "../../02_powershell_container/.devcontainer/Dockerfile",
+		"context": "../../02_powershell_container/.devcontainer"		
+	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
@@ -15,18 +21,6 @@
 		"git": "latest",
 		"github-cli": "latest",
 		"homebrew": "latest"
-	},
-	"build": {
-		"args": {
-			"UPGRADE_PACKAGES": "true"
-		},
-		"dockerfile": "../../02_powershell_container/.devcontainer/Dockerfile",
-		"context": "../../02_powershell_container/.devcontainer"		
-	},
-	"containerEnv": { 
-		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
-		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
-		"DEVCONTAINER_TYPE": "02_powershell_container" 
 	},
 
 	// Configure tool-specific properties.
@@ -47,13 +41,18 @@
 				"DavidAnson.vscode-markdownlint",
 				"dbaeumer.vscode-eslint"
 			]
-		}
-	},
-	"codespaces": {
-		"repositories": {
-			"chrisguest75/powershell_examples": {
-				"permissions": "read-all"
+		},
+		"codespaces": {
+			"repositories": {
+				"chrisguest75/powershell_examples": {
+					"permissions": "read-all"
+				}
 			}
 		}
-	}
+	},
+	"containerEnv": { 
+		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
+		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
+		"DEVCONTAINER_TYPE": "02_powershell_container" 
+	},	
 }

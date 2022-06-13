@@ -30,17 +30,9 @@
 			]
 		}
 	},
-	"containerEnv": { 
-		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
-		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
-		"DEVCONTAINER_TYPE": "03_typescript_container" 
-	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node",
@@ -61,6 +53,10 @@
 				"permissions": "read-all"
 			}
 		}
+	},
+	"containerEnv": { 
+		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
+		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
+		"DEVCONTAINER_TYPE": "03_typescript_container" 
 	}
-
 }

@@ -3,8 +3,8 @@
 {
 	"name": "Docker in Docker",
 	"build": {
-		"dockerfile": "../../04_docker_in_docker/Dockerfile",
-		"context": "../../04_docker_in_docker",
+		"dockerfile": "../../04_docker_in_docker/.devcontainer/Dockerfile",
+		"context": "../../04_docker_in_docker/.devcontainer",
 		"args": {
 			"UPGRADE_PACKAGES": "true"
 		}
@@ -25,7 +25,6 @@
 				"timonwong.shellcheck",
 				"DavidAnson.vscode-markdownlint",
 				"dbaeumer.vscode-eslint"
-
 			]
 		}
 	},
@@ -34,7 +33,7 @@
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "docker --version",
+	"postCreateCommand": "bash ./04_docker_in_docker/.devcontainer/postCreateCommand.sh",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode",
@@ -43,5 +42,10 @@
 		"git": "latest",
 		"github-cli": "latest",
 		"homebrew": "latest"
+	},
+	"containerEnv": { 
+		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
+		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
+		"DEVCONTAINER_TYPE": "04_docker_in_docker" 
 	}
 }
