@@ -62,4 +62,8 @@
 		  },
 		  "terminal.integrated.defaultProfile.linux": "My Zsh"		
 	}
+	// NOTE: THIS IS NOT WORKING 
+	// --mount-workspace-git-root false
+	// ,"workspaceMount": "source=${localWorkspaceFolder}/01_bash_container,target=/workspace,type=bind,consistency=cached", 
+	// "workspaceFolder": "/workspace"
 }

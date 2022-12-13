@@ -26,7 +26,7 @@ Based on my examples from shell_examples:
 ## Start (vscode)
 
 ```sh
-devcontainer up --config $(pwd)/.devcontainer/01_bash_container/devcontainer.json
+devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/01_bash_container/devcontainer.json
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
