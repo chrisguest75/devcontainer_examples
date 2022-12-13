@@ -15,16 +15,17 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 
 TODO:
 
-* CPP examples
+* ripgrep
+* terraform
 * Ability to clone other repos into the workspace
 * Build github actions for each container
 * How does a local build work with monorepo config?  vscode extension - GitHub.codespaces
 * Setup my dotfiles in a remote container
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
 * docker caching - to speed up build
-* build a cutom powershell jupyter build container
+* build a custom powershell jupyter build container
 
-NOTE: Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  
+NOTE: Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./startdevcontainer.sh` script.  
 
 ## Getting started
 
@@ -57,6 +58,13 @@ gh codespace
 
 # on the list it displays the real created time
 gh codespace list
+```
+
+## Run
+
+```sh
+# start bash devcontainer
+./startdevcontainer.sh -n=01_bash_container 
 ```
 
 ## 01 - bash development example
