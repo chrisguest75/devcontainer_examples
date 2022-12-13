@@ -15,6 +15,7 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 
 TODO:
 
+* Convert to use features rather than direct installs.  https://github.com/devcontainers/features
 * A custom devcontainer feature https://github.com/devcontainers/feature-starter (maybe my niceprompt example)
 * Get the folder filtering working
 * ripgrep
