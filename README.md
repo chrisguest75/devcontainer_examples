@@ -92,6 +92,11 @@ Steps [README.md](./04_docker_in_docker/README.md)
 Demonstrate jupyter in a `devcontainer`.  
 Steps [README.md](./05_jupyter/README.md)  
 
+## 06 - cpp example
+
+Demonstrate a simple cpp container with `cmake`.  
+Steps [README.md](./06_cpp/README.md)  
+
 ## Resources
 
 * [containers.dev](https://containers.dev/)
