@@ -15,6 +15,7 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 
 TODO:
 
+* A custom devcontainer feature https://github.com/devcontainers/feature-starter
 * Get the folder filtering working
 * ripgrep
 * terraform
