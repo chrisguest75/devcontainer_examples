@@ -23,6 +23,22 @@ Based on my examples from shell_examples:
 * [13_bats_mock](https://github.com/chrisguest75/shell_examples/tree/master/13_bats_mock)  
 * [21_nice_prompt](https://github.com/chrisguest75/docker_examples/tree/master/21_nice_prompt)  
 
+## Start (vscode)
+
+```sh
+devcontainer up --config $(pwd)/.devcontainer/01_bash_container/devcontainer.json
+```
+
+Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
+
+Add `/workspaces/devcontainer_examples` as a workspace to the new vscode editor.  
+
+```sh
+cd /workspaces/devcontainer_examples
+```
+
+## Run tests
+
 ```sh
 cd ./01_bash_container
 echo $DEVCONTAINER_TYPE

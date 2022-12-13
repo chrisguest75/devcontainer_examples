@@ -15,6 +15,7 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 
 TODO:
 
+* CPP examples
 * Ability to clone other repos into the workspace
 * Build github actions for each container
 * How does a local build work with monorepo config?  vscode extension - GitHub.codespaces
@@ -22,6 +23,8 @@ TODO:
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
 * docker caching - to speed up build
 * build a cutom powershell jupyter build container
+
+NOTE: Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  
 
 ## Getting started
 
@@ -87,4 +90,12 @@ Steps [README.md](./05_jupyter/README.md)
 * devcontainers.json [json_reference](https://containers.dev/implementors/json_reference/)
 * codespaces-multi-repository-monorepo-scenarios blog [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)
 * devcontainer-cli [here](https://code.visualstudio.com/docs/remote/devcontainer-cli)  
-* https://notes.alexkehayias.com/github-codespaces-is-too-slow-and-expensive-to-replace-local-development/
+* GitHub Codespaces Is Too Cumbersome and Expensive to Replace Local Development
+ [here](https://notes.alexkehayias.com/github-codespaces-is-too-slow-and-expensive-to-replace-local-development/)
+* devcontainers/cli repo [here](https://github.com/devcontainers/cli)  
+
+### Issues
+
+* Support multiple developer roles via multiple files in .devcontainer folder #7434 [here](https://github.com/microsoft/vscode-remote-release/issues/7434)
+* Support for folders with multiple devcontainer.json files #7548 [here](https://github.com/microsoft/vscode-remote-release/issues/7548)
+* Simplify multiple devcontainer creation process. Allow multiple devcontainer.json ,we should be able to select any json and create dev container. #166681 [here](https://github.com/microsoft/vscode/issues/166681)  
