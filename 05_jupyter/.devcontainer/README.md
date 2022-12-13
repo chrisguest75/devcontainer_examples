@@ -8,7 +8,8 @@ Demonstrates:
 
 TODO:
 
-* A simple.  
+* User seems to be broken when ataching to it. 
+* Get the port forwarding working.
 
 ## Example
 

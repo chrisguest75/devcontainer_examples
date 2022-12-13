@@ -3,4 +3,3 @@ echo "executing postCreateCommand.sh"
 uname -a
 whoami
 
-docker --version
