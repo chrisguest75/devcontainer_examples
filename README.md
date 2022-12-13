@@ -15,11 +15,11 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 
 TODO:
 
+* Get the folder filtering working
 * ripgrep
 * terraform
 * Ability to clone other repos into the workspace
 * Build github actions for each container
-* How does a local build work with monorepo config?  vscode extension - GitHub.codespaces
 * Setup my dotfiles in a remote container
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
 * docker caching - to speed up build
