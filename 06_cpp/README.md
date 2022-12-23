@@ -36,5 +36,12 @@ cmake --build .
 ./helloworld
 ```
 
+## Stop
+
+```sh
+# stop devcontainer
+./startdevcontainer.sh -n=06_cpp --down
+```
+
 ## Resources
 

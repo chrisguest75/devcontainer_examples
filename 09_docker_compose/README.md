@@ -1,6 +1,6 @@
 # README
 
-Demonstrate a simple typescript application
+Demonstrate using `docker compose` inside a devcontainer.  
 
 Demonstrates:
 
@@ -12,16 +12,14 @@ Demonstrates:
   - [Building and Running](#building-and-running)
   - [Resources](#resources)
 
-Used a hygen template to create the express app Ref:[typescript_examples/00_project_templates](https://github.com/chrisguest75/typescript_examples/tree/master/00_project_templates)  
-
 ## Start (vscode)
 
 ```sh
 # start bash devcontainer
-./startdevcontainer.sh -n=08_typescript_express
+./startdevcontainer.sh -n=09_docker_compose
 
 # start bash devcontainer (rebuild)
-./startdevcontainer.sh -n=08_typescript_express --no-cache
+./startdevcontainer.sh -n=09_docker_compose --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -35,21 +33,16 @@ cd /workspaces/devcontainer_examples
 ## Building and Running
 
 ```sh
-cd 99_express       
-npm install       
-npm run start:dev  
-curl http://localhost:8000   
+cd 44_reverse_proxy
 
-# using docker in docker
-npm run docker:build   
-npm run docker:run           
+docker compose up -d
 ```
 
 ## Stop
 
 ```sh
 # stop devcontainer
-./startdevcontainer.sh -n=08_typescript_express --down
+./startdevcontainer.sh -n=09_docker_compose --down
 ```
 
 ## Resources

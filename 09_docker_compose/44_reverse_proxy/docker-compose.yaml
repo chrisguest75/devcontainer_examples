@@ -1,0 +1,52 @@
+services:
+    info_a:
+        image: "stefanprodan/podinfo:5.2.1"
+        environment:
+            - VERSION=0.0.1   
+            - PODNAME=info_a                    
+        #ports:
+        #    - "9001:9898"
+        command: [ "./podinfo", "--level=debug" ]            
+        networks:
+            - service_bridge
+
+    info_b:
+        image: "stefanprodan/podinfo:5.2.1"
+        environment:
+            - VERSION=0.0.2
+            - PODNAME=info_b              
+        #ports:
+        #    - "9002:9898"
+        command: [ "./podinfo", "--level=debug" ]  
+        networks:
+            - service_bridge
+
+    nginx:
+        image: "nginx:1.20.1"
+        volumes:
+            - type: bind
+              source: ./default.conf
+              target: /etc/nginx/templates/default.conf.template
+            - type: bind
+              source: ./nginx.conf
+              target: /etc/nginx/nginx.conf              
+        environment:
+            - VERSION=nginx:1.20.1
+        ports:
+            - "8080:80"
+        networks:
+            - service_bridge
+        depends_on:
+           - info_a    
+           - info_b        
+    
+    ubuntu:
+        image: "ubuntu:21.04"
+        command: [ "/bin/sh", "-c", "sleep infinity" ]  
+        networks:
+            - service_bridge
+
+networks:
+    service_bridge:
+        driver: bridge
+

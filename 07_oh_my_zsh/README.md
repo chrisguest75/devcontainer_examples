@@ -29,6 +29,14 @@ Add `/workspaces/devcontainer_examples` as a workspace to the new vscode editor.
 cd /workspaces/devcontainer_examples
 ```
 
+
+## Stop
+
+```sh
+# stop devcontainer
+./startdevcontainer.sh -n=07_oh_my_zsh --down
+```
+
 ## Resources
 
 * devcontainers/cli repo [here](https://github.com/devcontainers/cli)  
