@@ -15,8 +15,8 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 
 - [DevContainer Examples](#devcontainer-examples)
   - [Getting started](#getting-started)
-  - [github cli](#github-cli)
-  - [Run](#run)
+  - [Github cli codespaces](#github-cli-codespaces)
+  - [Run \& Stop](#run--stop)
   - [01 - bash development example](#01---bash-development-example)
   - [02 - powershell development example](#02---powershell-development-example)
   - [03 - typescript development example](#03---typescript-development-example)
@@ -65,7 +65,7 @@ devcontainer build ./.devcontainer/01_bash_container
 code --install-extension GitHub.codespaces
 ```
 
-## github cli
+## Github cli codespaces
 
 ```sh
 export PAGER=
@@ -76,11 +76,14 @@ gh codespace
 gh codespace list
 ```
 
-## Run
+## Run & Stop
 
 ```sh
 # start bash devcontainer
-./startdevcontainer.sh -n=01_bash_container 
+./startdevcontainer.sh -n=01_bash_container --no-cache
+
+# stop bash devcontainer
+./startdevcontainer.sh -n=01_bash_container --down
 ```
 
 ## 01 - bash development example

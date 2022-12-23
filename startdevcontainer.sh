@@ -73,6 +73,6 @@ else
         echo "${_CONTAINERNAME} not found"
     else
         echo "Stopping ${_CONTAINERNAME} as ${CONTAINERID}"
-        docker stop ${CONTAINERID} && docker rm ${CONTAINERID}
+        docker stop ${CONTAINERID} && docker rm $_
     fi
 fi
