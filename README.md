@@ -121,6 +121,17 @@ Steps [README.md](./06_cpp/README.md)
 Demonstrate a simple zsh container using features.  
 Steps [README.md](./07_oh_my_zsh/README.md)  
 
+## 08 - typescript express
+
+Demonstrate a simple typescript application with docker in docker support.  
+Steps [README.md](./08_typescript_express/README.md)  
+
+## 09 - docker compose
+
+Demonstrate using `docker compose` inside a devcontainer.  
+Steps [README.md](./09_docker_compose/README.md)  
+
+
 ## Resources
 
 * [containers.dev](https://containers.dev/)

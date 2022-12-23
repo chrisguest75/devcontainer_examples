@@ -12,6 +12,8 @@ Demonstrates:
   - [Building and Running](#building-and-running)
   - [Resources](#resources)
 
+Used reverse proxy example Ref:[docker_examples/44_reverse_proxy](https://github.com/chrisguest75/docker_examples/tree/master/44_reverse_proxy)  
+
 ## Start (vscode)
 
 ```sh

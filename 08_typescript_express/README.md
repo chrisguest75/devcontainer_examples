@@ -1,11 +1,10 @@
 # README
 
-Demonstrate a simple typescript application
+Demonstrate a simple typescript application with docker in docker support.  
 
 Demonstrates:
 
-* Using features
-* It seems to be much quicker to build.  
+* Using features to compose node and docker in docker quickly.  
 
 - [README](#readme)
   - [Start (vscode)](#start-vscode)
