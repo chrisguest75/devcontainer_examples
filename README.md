@@ -24,6 +24,8 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
   - [05 - jupyter example](#05---jupyter-example)
   - [06 - cpp example](#06---cpp-example)
   - [07 - oh my zsh](#07---oh-my-zsh)
+  - [08 - typescript express](#08---typescript-express)
+  - [09 - docker compose](#09---docker-compose)
   - [Resources](#resources)
     - [Issues](#issues)
 
@@ -31,8 +33,6 @@ TODO:
 
 * Convert to use features rather than direct installs.  https://github.com/devcontainers/features
 * A custom devcontainer feature https://github.com/devcontainers/feature-starter (maybe my niceprompt example)
-* Get the folder filtering working
-* ripgrep
 * terraform
 * Ability to clone other repos into the workspace
 * Build github actions for each container
@@ -137,6 +137,7 @@ Steps [README.md](./09_docker_compose/README.md)
 * [containers.dev](https://containers.dev/)
 * devcontainers.json [json_reference](https://containers.dev/implementors/json_reference/)
 * manekinekko/awesome-devcontainers repo [here](https://github.com/manekinekko/awesome-devcontainers)  
+* Available Dev Container Features [here](https://containers.dev/features)  
 * codespaces-multi-repository-monorepo-scenarios blog [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)
 * devcontainer-cli [here](https://code.visualstudio.com/docs/remote/devcontainer-cli)  
 * GitHub Codespaces Is Too Cumbersome and Expensive to Replace Local Development

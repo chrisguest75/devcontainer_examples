@@ -43,7 +43,7 @@ case $i in
         _NOCACHE="--build-no-cache"
         shift # past argument=value
     ;;     
-    --down)
+    --down|--stop)
         _DOWN=true
         shift # past argument=value
     ;;

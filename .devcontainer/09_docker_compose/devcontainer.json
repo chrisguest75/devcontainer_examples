@@ -61,6 +61,6 @@
 	}
 	// NOTE: THIS IS NOT WORKING 
 	// --mount-workspace-git-root false
-	// ,"workspaceMount": "source=${localWorkspaceFolder}/01_bash_container,target=/workspace,type=bind,consistency=cached", 
-	// "workspaceFolder": "/workspace"
+	,"workspaceMount": "source=${localWorkspaceFolder}/09_docker_compose,target=/workspace/09_docker_compose,type=bind,consistency=cached", 
+	"workspaceFolder": "/workspace"
 }

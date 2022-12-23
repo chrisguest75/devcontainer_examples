@@ -4,7 +4,7 @@ Demonstrate using `docker compose` inside a devcontainer.
 
 Demonstrates:
 
-* Using features
+* Using features like docker compose.
 * It seems to be much quicker to build.  
 
 - [README](#readme)
