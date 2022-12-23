@@ -1,16 +1,16 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/ubuntu
 {
-	"name": "docker compose",
+	"name": "terraform",
 	"build": {
-		"dockerfile": "../../09_docker_compose/.devcontainer/Dockerfile",
-		"context": "../../09_docker_compose/.devcontainer",
+		"dockerfile": "../../10_terraform/.devcontainer/Dockerfile",
+		"context": "../../10_terraform/.devcontainer",
 		// Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
 		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
 		"args": { "VARIANT": "ubuntu-22.04" }
 	},
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash ./09_docker_compose/.devcontainer/postCreateCommand.sh",
+	"postCreateCommand": "bash ./10_terraform/.devcontainer/postCreateCommand.sh",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -19,10 +19,6 @@
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "root",
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {
-			"version": "latest",
-			"dockerDashComposeVersion": "v2"
-		},		
 		"ghcr.io/devcontainers/features/common-utils:2": {
 			"configureZshAsDefaultShell": true,
 			"installZsh": true,
@@ -31,6 +27,10 @@
 		},
 		"ghcr.io/devcontainers/features/git:1": {
 			"version": "latest"
+		},
+		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {
+			"version": "latest",
+			"shallowClone": false
 		}
 	},
 	// Configure tool-specific properties.
@@ -48,8 +48,9 @@
 	},
 	"containerEnv": { 
 		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
-		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
-		"DEVCONTAINER_TYPE": "09_docker_compose" 
+		"MY_VARIABLE": "${localEnv:MY_VARIABLE}",
+		"TERRAFORM_VERSION": "1.2.8",
+		"DEVCONTAINER_TYPE": "10_terraform" 
 	},
 	"settings": { 
 		"terminal.integrated.profiles.linux": {
@@ -59,6 +60,6 @@
 		  },
 		  "terminal.integrated.defaultProfile.linux": "zsh"		
 	}
-	,"workspaceMount": "source=${localWorkspaceFolder}/09_docker_compose,target=/workspace/09_docker_compose,type=bind,consistency=cached", 
+	,"workspaceMount": "source=${localWorkspaceFolder}/10_terraform,target=/workspace/10_terraform,type=bind,consistency=cached", 
 	"workspaceFolder": "/workspace"
 }

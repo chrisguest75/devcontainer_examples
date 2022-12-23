@@ -1,0 +1,23 @@
+{
+  "records": [
+      {
+        "zoneid": "XXXXXXXXXXX", 
+        "name": "www.newdomain.com",
+        "type": "CNAME",
+        "ttl": "300",
+        "records": [
+          "www.domain.com"
+        ]
+      },
+      {
+        "zoneid": "XXXXXXXXXXX", 
+        "name": "www.domain.com",
+        "type": "CNAME",
+        "ttl": "300",
+        "records": [
+          "guid.cloud.com",
+          "validation.cloud.com"
+        ]
+    }
+  ] 
+}

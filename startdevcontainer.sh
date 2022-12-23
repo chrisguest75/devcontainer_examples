@@ -66,6 +66,8 @@ fi
 
 if [[ -z "${_DOWN}" ]]; then 
     #devcontainer up --remove-existing-container ${_NOCACHE} --config "$(pwd)/.devcontainer/${_CONTAINERNAME}/devcontainer.json"
+    # can mapp in git folder but because everything else is missing it gets confused. 
+    #devcontainer up --mount "type=bind,source=$(git root)/.git,target=/workspace/.git" --id-label containername=${_CONTAINERNAME} --remove-existing-container ${_NOCACHE} --config "$(pwd)/.devcontainer/${_CONTAINERNAME}/devcontainer.json"
     devcontainer up --id-label containername=${_CONTAINERNAME} --remove-existing-container ${_NOCACHE} --config "$(pwd)/.devcontainer/${_CONTAINERNAME}/devcontainer.json"
 else
     CONTAINERID=$(docker ps -aqf label=containername=${_CONTAINERNAME})
