@@ -11,9 +11,12 @@ function help() {
 usage: $SCRIPT_NAME options
 
 OPTIONS:
-    -n --name=[devcontainer]
+    -n --name=[devcontainer]        Name of container to bring up
+    --down                          Stop the devcontainer
 
-    -h --help -?               show this help
+    --no-cache                      Rebuild with no caching
+
+    -h --help -?                    show this help
 
 Examples:
     $SCRIPT_NAME --help 
@@ -23,6 +26,7 @@ EOF
 
 _CONTAINERNAME=""
 _NOCACHE=""
+_DOWN=""
 
 for i in "$@"
 do
@@ -36,9 +40,17 @@ case $i in
         shift # past argument=value
     ;;  
     --no-cache)
-        _NOCACHE="--no-cache"
+        _NOCACHE="--build-no-cache"
         shift # past argument=value
     ;;     
+    --down)
+        _DOWN=true
+        shift # past argument=value
+    ;;
+    *)
+        >&2 echo "Unrecognised option '$i', specify --help"
+        exit 0
+    ;;
 esac
 done    
 
@@ -52,4 +64,15 @@ if [[ ! -d ".devcontainer/${_CONTAINERNAME}" ]]; then
     exit 2
 fi
 
-devcontainer up --remove-existing-container ${_NOCACHE} --config "$(pwd)/.devcontainer/${_CONTAINERNAME}/devcontainer.json"
+if [[ -z "${_DOWN}" ]]; then 
+    #devcontainer up --remove-existing-container ${_NOCACHE} --config "$(pwd)/.devcontainer/${_CONTAINERNAME}/devcontainer.json"
+    devcontainer up --id-label containername=${_CONTAINERNAME} --remove-existing-container ${_NOCACHE} --config "$(pwd)/.devcontainer/${_CONTAINERNAME}/devcontainer.json"
+else
+    CONTAINERID=$(docker ps -aqf label=containername=${_CONTAINERNAME})
+    if [[ -z "${CONTAINERID}" ]]; then
+        echo "${_CONTAINERNAME} not found"
+    else
+        echo "Stopping ${_CONTAINERNAME} as ${CONTAINERID}"
+        docker stop ${CONTAINERID} && docker rm ${CONTAINERID}
+    fi
+fi

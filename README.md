@@ -13,6 +13,20 @@ The Remote - Containers extension lets you use a Docker container as a full-feat
 
 Based on my examples from docker_examples [41_remote_containers](https://github.com/chrisguest75/docker_examples/tree/master/41_remote_containers) and [41_nodejs_remote_devcontainer](https://github.com/chrisguest75/docker_examples/tree/master/41_nodejs_remote_devcontainer).  
 
+- [DevContainer Examples](#devcontainer-examples)
+  - [Getting started](#getting-started)
+  - [github cli](#github-cli)
+  - [Run](#run)
+  - [01 - bash development example](#01---bash-development-example)
+  - [02 - powershell development example](#02---powershell-development-example)
+  - [03 - typescript development example](#03---typescript-development-example)
+  - [04 - docker in docker example](#04---docker-in-docker-example)
+  - [05 - jupyter example](#05---jupyter-example)
+  - [06 - cpp example](#06---cpp-example)
+  - [07 - oh my zsh](#07---oh-my-zsh)
+  - [Resources](#resources)
+    - [Issues](#issues)
+
 TODO:
 
 * Convert to use features rather than direct installs.  https://github.com/devcontainers/features
@@ -99,15 +113,24 @@ Steps [README.md](./05_jupyter/README.md)
 Demonstrate a simple cpp container with `cmake`.  
 Steps [README.md](./06_cpp/README.md)  
 
+## 07 - oh my zsh
+
+Demonstrate a simple zsh container using features.  
+Steps [README.md](./07_oh_my_zsh/README.md)  
+
 ## Resources
 
 * [containers.dev](https://containers.dev/)
 * devcontainers.json [json_reference](https://containers.dev/implementors/json_reference/)
+* manekinekko/awesome-devcontainers repo [here](https://github.com/manekinekko/awesome-devcontainers)  
 * codespaces-multi-repository-monorepo-scenarios blog [here](https://github.blog/2022-04-20-codespaces-multi-repository-monorepo-scenarios/)
 * devcontainer-cli [here](https://code.visualstudio.com/docs/remote/devcontainer-cli)  
 * GitHub Codespaces Is Too Cumbersome and Expensive to Replace Local Development
  [here](https://notes.alexkehayias.com/github-codespaces-is-too-slow-and-expensive-to-replace-local-development/)
 * devcontainers/cli repo [here](https://github.com/devcontainers/cli)  
+* devcontainers-contrib/features repo [here](https://github.com/devcontainers-contrib/features)
+* devcontainers/features repo [here](https://github.com/devcontainers/features)
+* rocker-org/devcontainer-features repo [here](https://github.com/rocker-org/devcontainer-features/tree/main/src/apt-packages)  
 
 ### Issues
 
