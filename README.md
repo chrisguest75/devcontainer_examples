@@ -26,12 +26,12 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
   - [07 - oh my zsh](#07---oh-my-zsh)
   - [08 - typescript express](#08---typescript-express)
   - [09 - docker compose](#09---docker-compose)
+  - [10 - terraform](#10---terraform)
   - [Resources](#resources)
     - [Issues](#issues)
 
 TODO:
 
-* Convert to use features rather than direct installs.  https://github.com/devcontainers/features
 * A custom devcontainer feature https://github.com/devcontainers/feature-starter (maybe my niceprompt example)
 * terraform
 * Ability to clone other repos into the workspace
@@ -40,8 +40,12 @@ TODO:
 * Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
 * docker caching - to speed up build
 * build a custom powershell jupyter build container
+* Configure different users.
 
-NOTE: Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./startdevcontainer.sh` script.  
+NOTES:
+
+* Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./startdevcontainer.sh` script.  
+* If you don't map the `.git` folder then you can't use codespaces to change and commit.  
 
 ## Getting started
 
@@ -131,6 +135,10 @@ Steps [README.md](./08_typescript_express/README.md)
 Demonstrate using `docker compose` inside a devcontainer.  
 Steps [README.md](./09_docker_compose/README.md)  
 
+## 10 - terraform
+
+Demonstrate a simple terraform container.  
+Steps [README.md](./10_terraform/README.md)  
 
 ## Resources
 

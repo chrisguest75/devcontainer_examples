@@ -2,6 +2,11 @@
 
 Demonstrate a simple zsh container using features.  
 
+TODO:
+
+* Configure zsh correctly (niceprompt).  
+* 
+
 Demonstrates:
 
 * Using features
@@ -9,15 +14,16 @@ Demonstrates:
 
 - [README](#readme)
   - [Start (vscode)](#start-vscode)
+  - [Stop](#stop)
   - [Resources](#resources)
 
 ## Start (vscode)
 
 ```sh
-# start bash devcontainer
+# start oh_my_zsh devcontainer
 ./startdevcontainer.sh -n=07_oh_my_zsh
 
-# start bash devcontainer (rebuild)
+# start oh_my_zsh devcontainer (rebuild)
 ./startdevcontainer.sh -n=07_oh_my_zsh --no-cache
 ```
 
@@ -28,7 +34,6 @@ Add `/workspaces/devcontainer_examples` as a workspace to the new vscode editor.
 ```sh
 cd /workspaces/devcontainer_examples
 ```
-
 
 ## Stop
 
