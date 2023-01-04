@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/jupyter-datascience-notebooks
 {
-	"name": "Jupyter Data Science Notebooks (Community)",
+	"name": "05_jupyter",
 	"build": {
 		"dockerfile": "../../05_jupyter/.devcontainer/Dockerfile",
 		"context": "../../05_jupyter/.devcontainer"

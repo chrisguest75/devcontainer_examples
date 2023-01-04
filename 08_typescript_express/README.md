@@ -9,6 +9,7 @@ Demonstrates:
 - [README](#readme)
   - [Start (vscode)](#start-vscode)
   - [Building and Running](#building-and-running)
+  - [Stop](#stop)
   - [Resources](#resources)
 
 Used a hygen template to create the express app Ref:[typescript_examples/00_project_templates](https://github.com/chrisguest75/typescript_examples/tree/master/00_project_templates)  
@@ -17,10 +18,10 @@ Used a hygen template to create the express app Ref:[typescript_examples/00_proj
 
 ```sh
 # start bash devcontainer
-./startdevcontainer.sh -n=08_typescript_express
+./devcontainerctl.sh -n=08_typescript_express
 
 # start bash devcontainer (rebuild)
-./startdevcontainer.sh -n=08_typescript_express --no-cache
+./devcontainerctl.sh -n=08_typescript_express --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -48,7 +49,7 @@ npm run docker:run
 
 ```sh
 # stop devcontainer
-./startdevcontainer.sh -n=08_typescript_express --down
+./devcontainerctl.sh -n=08_typescript_express --down
 ```
 
 ## Resources

@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/powershell
 {
-	"name": "PowerShell",
+	"name": "02_powershell_container",
 	"build": {
 		"args": {
 			"UPGRADE_PACKAGES": "true"

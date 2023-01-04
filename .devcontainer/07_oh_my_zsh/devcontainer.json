@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/ubuntu
 {
-	"name": "oh_my_zsh",
+	"name": "07_oh_my_zsh",
 	"build": {
 		"dockerfile": "../../07_oh_my_zsh/.devcontainer/Dockerfile",
 		"context": "../../07_oh_my_zsh/.devcontainer",

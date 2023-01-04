@@ -7,6 +7,10 @@ Demonstrates:
 * Using features
 * It seems to be much quicker to build.  
 
+TODO:
+
+* THIS IS NOT WORKING
+
 - [README](#readme)
   - [Start (vscode)](#start-vscode)
   - [Stop](#stop)
@@ -16,10 +20,10 @@ Demonstrates:
 
 ```sh
 # start bash devcontainer
-./startdevcontainer.sh -n=10_terraform
+./devcontainerctl.sh -n=10_terraform
 
 # start bash devcontainer (rebuild)
-./startdevcontainer.sh -n=10_terraform --no-cache
+./devcontainerctl.sh -n=10_terraform --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -34,7 +38,7 @@ cd /workspaces/devcontainer_examples
 
 ```sh
 # stop devcontainer
-./startdevcontainer.sh -n=10_terraform --down
+./devcontainerctl.sh -n=10_terraform --down
 ```
 
 ## Resources

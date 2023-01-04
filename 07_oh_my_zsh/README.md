@@ -21,10 +21,10 @@ Demonstrates:
 
 ```sh
 # start oh_my_zsh devcontainer
-./startdevcontainer.sh -n=07_oh_my_zsh
+./devcontainerctl.sh -n=07_oh_my_zsh
 
 # start oh_my_zsh devcontainer (rebuild)
-./startdevcontainer.sh -n=07_oh_my_zsh --no-cache
+./devcontainerctl.sh -n=07_oh_my_zsh --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -39,7 +39,7 @@ cd /workspaces/devcontainer_examples
 
 ```sh
 # stop devcontainer
-./startdevcontainer.sh -n=07_oh_my_zsh --down
+./devcontainerctl.sh -n=07_oh_my_zsh --down
 ```
 
 ## Resources

@@ -1,5 +1,5 @@
 #!/bin/bash/env bash
 echo "executing postCreateCommand.sh"
-uname -a
-whoami
+echo "uname: $(uname -a)"
+echo "whoami: $(whoami)"
 

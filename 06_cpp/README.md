@@ -40,7 +40,7 @@ cmake --build .
 
 ```sh
 # stop devcontainer
-./startdevcontainer.sh -n=06_cpp --down
+./devcontainerctl.sh -n=06_cpp --down
 ```
 
 ## Resources

@@ -1,5 +1,5 @@
 {
-	"name": "C++",
+	"name": "06_cpp",
 	"build": {
 		"dockerfile": "../../06_cpp/.devcontainer/Dockerfile",
 		"context": "../../06_cpp/.devcontainer",

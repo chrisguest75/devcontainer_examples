@@ -32,6 +32,7 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
 
 TODO:
 
+* Where is the .dockerignore rooted?
 * A custom devcontainer feature https://github.com/devcontainers/feature-starter (maybe my niceprompt example)
 * terraform
 * Ability to clone other repos into the workspace
@@ -44,7 +45,7 @@ TODO:
 
 NOTES:
 
-* Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./startdevcontainer.sh` script.  
+* Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./devcontainerctl.sh` script.  
 * If you don't map the `.git` folder then you can't use codespaces to change and commit.  
 
 ## Getting started
@@ -61,7 +62,6 @@ Select Ubuntu and follow options
 
 ```sh
 npm install -g @vscode/dev-container-cli  
-devcontainer build ./.devcontainer/01_bash_container  
 ```
 
 ```sh
@@ -84,10 +84,10 @@ gh codespace list
 
 ```sh
 # start bash devcontainer
-./startdevcontainer.sh -n=01_bash_container --no-cache
+./devcontainerctl.sh -n=01_bash_container --no-cache
 
 # stop bash devcontainer
-./startdevcontainer.sh -n=01_bash_container --down
+./devcontainerctl.sh -n=01_bash_container --down
 ```
 
 ## 01 - bash development example

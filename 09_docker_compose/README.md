@@ -10,6 +10,7 @@ Demonstrates:
 - [README](#readme)
   - [Start (vscode)](#start-vscode)
   - [Building and Running](#building-and-running)
+  - [Stop](#stop)
   - [Resources](#resources)
 
 Used reverse proxy example Ref:[docker_examples/44_reverse_proxy](https://github.com/chrisguest75/docker_examples/tree/master/44_reverse_proxy)  
@@ -18,10 +19,10 @@ Used reverse proxy example Ref:[docker_examples/44_reverse_proxy](https://github
 
 ```sh
 # start bash devcontainer
-./startdevcontainer.sh -n=09_docker_compose
+./devcontainerctl.sh -n=09_docker_compose
 
 # start bash devcontainer (rebuild)
-./startdevcontainer.sh -n=09_docker_compose --no-cache
+./devcontainerctl.sh -n=09_docker_compose --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -44,7 +45,7 @@ docker compose up -d
 
 ```sh
 # stop devcontainer
-./startdevcontainer.sh -n=09_docker_compose --down
+./devcontainerctl.sh -n=09_docker_compose --down
 ```
 
 ## Resources
