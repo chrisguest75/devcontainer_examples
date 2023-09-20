@@ -61,7 +61,8 @@ code --install-extension ms-vscode-remote.remote-containers
 Select Ubuntu and follow options
 
 ```sh
-npm install -g @vscode/dev-container-cli  
+nvm use
+npm install -g @devcontainers/cli
 ```
 
 ```sh
@@ -160,3 +161,6 @@ Steps [README.md](./10_terraform/README.md)
 * Support multiple developer roles via multiple files in .devcontainer folder #7434 [here](https://github.com/microsoft/vscode-remote-release/issues/7434)
 * Support for folders with multiple devcontainer.json files #7548 [here](https://github.com/microsoft/vscode-remote-release/issues/7548)
 * Simplify multiple devcontainer creation process. Allow multiple devcontainer.json ,we should be able to select any json and create dev container. #166681 [here](https://github.com/microsoft/vscode/issues/166681)  
+* Dev Container CLI NPM [here](https://www.npmjs.com/package/@devcontainers/cli)
+* Dev Container CLI Repo [here](https://github.com/devcontainers/cli)
+* Dev Container Features reference [here](https://containers.dev/implementors/features/)  
