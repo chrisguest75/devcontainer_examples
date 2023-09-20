@@ -1,51 +1,51 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/docker-in-docker
 {
-	"name": "04_docker_in_docker",
-	"build": {
-		"dockerfile": "../../04_docker_in_docker/.devcontainer/Dockerfile",
-		"context": "../../04_docker_in_docker/.devcontainer",
-		"args": {
-			"UPGRADE_PACKAGES": "true"
-		}
-	},
-	"runArgs": ["--init", "--privileged"],
-	"mounts": ["source=dind-var-lib-docker,target=/var/lib/docker,type=volume"],
-	"overrideCommand": false,
+  "name": "04_docker_in_docker",
+  "build": {
+    "dockerfile": "../../04_docker_in_docker/.devcontainer/Dockerfile",
+    "context": "../../04_docker_in_docker/.devcontainer",
+    "args": {
+      "UPGRADE_PACKAGES": "true"
+    }
+  },
+  "runArgs": ["--init", "--privileged"],
+  "mounts": ["source=dind-var-lib-docker,target=/var/lib/docker,type=volume"],
+  "overrideCommand": false,
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"ms-azuretools.vscode-docker",
-				"ms-vsliveshare.vsliveshare",
-				"oderwat.indent-rainbow",
-				"timonwong.shellcheck",
-				"DavidAnson.vscode-markdownlint",
-				"dbaeumer.vscode-eslint"
-			]
-		}
-	},
-	
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "timonwong.shellcheck",
+        "DavidAnson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint"
+      ]
+    }
+  },
 
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash ./04_docker_in_docker/.devcontainer/postCreateCommand.sh",
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
 
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode",
-	"features": {
-		"docker-in-docker": "latest",
-		"git": "latest",
-		"github-cli": "latest",
-		"homebrew": "latest"
-	},
-	"containerEnv": { 
-		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
-		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
-		"DEVCONTAINER_TYPE": "04_docker_in_docker" 
-	}
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "bash /workspaces/devcontainer_examples/04_docker_in_docker/.devcontainer/postCreateCommand.sh",
+
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode",
+  "features": {
+    "docker-in-docker": "latest",
+    "git": "latest",
+    "github-cli": "latest",
+    "homebrew": "latest"
+  },
+  "containerEnv": {
+    "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
+    "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
+    "DEVCONTAINER_TYPE": "04_docker_in_docker"
+  }
 }

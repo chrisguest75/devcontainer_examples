@@ -1,62 +1,68 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/typescript-node
 {
-	"name": "03_typescript_container",
-	"build": {
-		"dockerfile": "../../03_typescript_container/.devcontainer/Dockerfile",
-		"context": "../../03_typescript_container/.devcontainer",
-		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
-		// Append -bullseye or -buster to pin to an OS version.
-		// Use -bullseye variants on local on arm64/Apple Silicon.
-		"args": { 
-			"VARIANT": "16-bullseye"
-		}
-	},
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash ./03_typescript_container/.devcontainer/postCreateCommand.sh",
+  "name": "03_typescript_container",
+  "build": {
+    "dockerfile": "../../03_typescript_container/.devcontainer/Dockerfile",
+    "context": "../../03_typescript_container/.devcontainer",
+    // Update 'VARIANT' to pick a Node version: 18, 16, 14.
+    // Append -bullseye or -buster to pin to an OS version.
+    // Use -bullseye variants on local on arm64/Apple Silicon.
+    "args": {
+      "VARIANT": "16-bullseye"
+    }
+  },
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "bash /workspaces/devcontainer_examples/03_typescript_container/.devcontainer/postCreateCommand.sh",
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {			
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"ms-azuretools.vscode-docker",
-				"ms-vsliveshare.vsliveshare",
-				"oderwat.indent-rainbow",
-				"timonwong.shellcheck",
-				"DavidAnson.vscode-markdownlint",
-				"dbaeumer.vscode-eslint"
-			]
-		}
-	},
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "timonwong.shellcheck",
+        "DavidAnson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint"
+      ]
+    },
+    "codespaces": {
+      "repositories": {
+        "chrisguest75/shell_examples": {
+          "permissions": "read-all"
+        },
+        "chrisguest75/typescript_examples": {
+          "permissions": "read-all"
+        },
+        "chrisguest75/docker_examples": {
+          "permissions": "read-all"
+        }
+      }
+    }
+  },
 
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
 
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "node",
-	"features": {
-		"git": "latest",
-		"github-cli": "latest",
-		"homebrew": "latest"
-	},
-	"codespaces": {
-		"repositories": {
-			"chrisguest75/shell_examples": {
-				"permissions": "read-all"
-			},
-			"chrisguest75/typescript_examples": {
-				"permissions": "read-all"
-			},
-			"chrisguest75/docker_examples": {
-				"permissions": "read-all"
-			}
-		}
-	},
-	"containerEnv": { 
-		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
-		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
-		"DEVCONTAINER_TYPE": "03_typescript_container" 
-	}
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "node",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {
+      "version": "latest",
+      "shallowClone": true
+    }
+  },
+
+  "containerEnv": {
+    "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
+    "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
+    "DEVCONTAINER_TYPE": "03_typescript_container"
+  }
 }

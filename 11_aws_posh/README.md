@@ -27,7 +27,7 @@ Based on my examples from shell_examples:
 ## Start (vscode)
 
 ```sh
-./devcontainerctl.sh -n=11_aws_posh       
+./devcontainerctl.sh -n=11_aws_posh
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"

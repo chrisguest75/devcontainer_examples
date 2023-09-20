@@ -1,48 +1,46 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/jupyter-datascience-notebooks
 {
-	"name": "05_jupyter",
-	"build": {
-		"dockerfile": "../../05_jupyter/.devcontainer/Dockerfile",
-		"context": "../../05_jupyter/.devcontainer"
-	},
-	"overrideCommand": false,
-	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash ./05_jupyter/.devcontainer/postCreateCommand.sh",
-	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+  "name": "05_jupyter",
+  "build": {
+    "dockerfile": "../../05_jupyter/.devcontainer/Dockerfile",
+    "context": "../../05_jupyter/.devcontainer"
+  },
+  "overrideCommand": false,
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "bash /workspaces/devcontainer_examples/05_jupyter/.devcontainer/postCreateCommand.sh",
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "pip3 install --user -r requirements.txt",
 
-	// Forward Jupyter port locally, mark required
-	"forwardPorts": [8888],
-	"portsAttributes": {
-		"8888": {
-			"label": "Jupyter",
-			"requireLocalPort": true,
-			"onAutoForward": "ignore"
-		}
-	},
+  // Forward Jupyter port locally, mark required
+  "forwardPorts": [8888],
+  "portsAttributes": {
+    "8888": {
+      "label": "Jupyter",
+      "requireLocalPort": true,
+      "onAutoForward": "ignore"
+    }
+  },
 
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
-			// Set *default* container specific settings.json values on container create.
-			"settings": { 
-				"python.defaultInterpreterPath": "/opt/conda/bin/python"
-			},
-			
-			// Add the IDs of extensions you want installed when the container is created.
-			"extensions": [
-				"ms-python.python"
-			]
-		}
-	},
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Set *default* container specific settings.json values on container create.
+      "settings": {
+        "python.defaultInterpreterPath": "/opt/conda/bin/python"
+      },
 
-	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "jovyan",
-	"containerEnv": { 
-		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}", 
-		"MY_VARIABLE": "${localEnv:MY_VARIABLE}", 
-		"DEVCONTAINER_TYPE": "05_jupyter" 
-	}
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": ["ms-python.python"]
+    }
+  },
+
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "jovyan",
+  "containerEnv": {
+    "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
+    "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
+    "DEVCONTAINER_TYPE": "05_jupyter"
+  }
 }
