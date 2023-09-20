@@ -83,6 +83,10 @@ gh codespace list
 
 ## Run & Stop
 
+* Use `⌘ + ^ + p` and "Dev containers: Rebuild and reopen in a container"  
+
+or use CLI  
+
 ```sh
 # start bash devcontainer
 ./devcontainerctl.sh -n=01_bash_container --no-cache
