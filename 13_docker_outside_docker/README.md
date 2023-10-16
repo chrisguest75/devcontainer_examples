@@ -60,13 +60,13 @@ md5sum ./random.bin
 cat ./random.bin | docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --pipe --target=/myvolume/random.bin
 
 # list volume contents
-cat ./random.bin | docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --list --target=/myvolume
+docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --list --target=/myvolume
 
 # show contents on the volume
-cat ./random.bin | docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --show --target=/myvolume/random.bin
+docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --show --target=/myvolume/random.bin
 
 # file md5 on the volume
-cat ./random.bin | docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --md5 --target=/myvolume/random.bin
+docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --md5 --target=/myvolume/random.bin
 ```
 
 ## Resources
