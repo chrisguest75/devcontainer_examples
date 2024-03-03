@@ -1,5 +1,22 @@
 # DevContainer Examples
 
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)  
+  
+## Conventional Commits
+
+NOTE: This repo has switched to [conventional commits](https://www.conventionalcommits.org/en/v1.0.0). It requires `pre-commit` and `commitizen` to help with controlling this.  
+
+```sh
+# install pre-commmit (prerequisite for commitizen)
+brew install pre-commit
+brew install commitizen
+# conventional commits extension
+code --install-extension vivaxy.vscode-conventional-commits
+
+# install hooks
+pre-commit install --hook-type commit-msg --hook-type pre-push
+```
+
 [![Repository](https://skillicons.dev/icons?i=docker,bash,linux)](https://skillicons.dev)
 
 A repository for showing examples of how to use `devcontainers`.  
@@ -14,6 +31,7 @@ The Remote - Containers extension lets you use a Docker container as a full-feat
 Based on my examples from docker_examples [41_remote_containers](https://github.com/chrisguest75/docker_examples/tree/master/41_remote_containers) and [41_nodejs_remote_devcontainer](https://github.com/chrisguest75/docker_examples/tree/master/41_nodejs_remote_devcontainer).  
 
 - [DevContainer Examples](#devcontainer-examples)
+  - [Conventional Commits](#conventional-commits)
   - [Getting started](#getting-started)
   - [Github cli codespaces](#github-cli-codespaces)
   - [Run \& Stop](#run--stop)
@@ -45,7 +63,8 @@ TODO:
 
 NOTES:
 
-* Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./devcontainerctl.sh` script.  
+* ~~Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./devcontainerctl.sh` script.~~
+* You can now very easily use the Remote Containers extension to open the containers.  
 * If you don't map the `.git` folder then you can't use codespaces to change and commit.  
 
 ## Getting started
