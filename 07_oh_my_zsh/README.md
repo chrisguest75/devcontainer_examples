@@ -1,30 +1,30 @@
 # README
 
-Demonstrate a simple zsh container using features.  
-
-TODO:
-
-* Configure zsh correctly (niceprompt).  
-* 
+Demonstrate a simple `zsh` container using features.  
 
 Demonstrates:
 
 * Using features
 * It seems to be much quicker to build.  
 
+TODO:
+
+* Configure zsh correctly (niceprompt).  
+
+## Contents
+
 - [README](#readme)
+  - [Contents](#contents)
   - [Start (vscode)](#start-vscode)
-  - [Stop](#stop)
+  - [Run tests](#run-tests)
   - [Resources](#resources)
 
 ## Start (vscode)
 
-```sh
-# start oh_my_zsh devcontainer
-./devcontainerctl.sh -n=07_oh_my_zsh
+Use the Remote Containers extension and select "Reopen in Container" or...  
 
-# start oh_my_zsh devcontainer (rebuild)
-./devcontainerctl.sh -n=07_oh_my_zsh --no-cache
+```sh
+devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/01_bash_container/devcontainer.json
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -35,11 +35,11 @@ Add `/workspaces/devcontainer_examples` as a workspace to the new vscode editor.
 cd /workspaces/devcontainer_examples
 ```
 
-## Stop
+## Run tests
 
 ```sh
-# stop devcontainer
-./devcontainerctl.sh -n=07_oh_my_zsh --down
+cd ./07_oh_my_zsh
+echo $DEVCONTAINER_TYPE
 ```
 
 ## Resources
