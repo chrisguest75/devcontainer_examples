@@ -4,11 +4,13 @@ Demonstrate a `typescript` build environment in a devcontainer
 
 Demonstrates:
 
-*  
+* Node16
 
 TODO:
 
 ## Start (vscode)
+
+Use the Remote Containers extension and select "Reopen in Container" or...  
 
 ```sh
 devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/03_typescript_container/devcontainer.json
@@ -28,7 +30,7 @@ cd /workspaces/devcontainer_examples
 echo $DEVCONTAINER_TYPE
 ```
 
-Goto [03_typescript_container/99_test/TEMPLATE_README.md](03_typescript_container/99_test/TEMPLATE_README.md)
+Goto [03_typescript_container/99_test/TEMPLATE_README.md](03_typescript_container/99_test/TEMPLATE_README.md) and follow the instructions to build and run the code.  
 
-## Resources 
+## Resources
 
