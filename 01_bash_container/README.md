@@ -4,11 +4,11 @@ Demonstrate a simple bash container with `shellcheck` added.
 
 Demonstrates:
 
-* environment variables
-* vscode extensions
-* packages installed into the container
+* Environment variables
+* VSCode extensions
+* Packages installed into the container
 * postCreateCommand
-* overriding default shell from bash to zsh
+* Overriding default shell from bash to zsh
 
 NOTES:
 
@@ -24,6 +24,8 @@ Based on my examples from shell_examples:
 * [21_nice_prompt](https://github.com/chrisguest75/docker_examples/tree/master/21_nice_prompt)  
 
 ## Start (vscode)
+
+Use the Remote Containers extension and select "Reopen in Container" or...  
 
 ```sh
 devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/01_bash_container/devcontainer.json

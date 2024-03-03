@@ -4,13 +4,15 @@ Demonstrate a simple `powershell` devcontainer
 
 Demonstrates:
 
-* installing powershell
+* Installing powershell
 
 TODO:
 
 * add oh-my-posh
 
 ## Start (vscode)
+
+Use the Remote Containers extension and select "Reopen in Container" or...  
 
 ```sh
 devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/02_powershell_container/devcontainer.json
