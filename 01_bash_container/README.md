@@ -28,7 +28,11 @@ Based on my examples from shell_examples:
 Use the Remote Containers extension and select "Reopen in Container" or...  
 
 ```sh
-devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/01_bash_container/devcontainer.json
+# start devcontainer
+./devcontainerctl.sh -n=01_bash_container
+
+# start devcontainer (rebuild)
+./devcontainerctl.sh -n=01_bash_container --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -59,6 +63,13 @@ Follow steps in [18_bats_mock](./18_bats_mock/README.md)
 ```sh
 cd ./18_bats_mock
 ./configure.sh
+```
+
+## Stop
+
+```sh
+# stop devcontainer
+./devcontainerctl.sh -n=01_bash_container --down
 ```
 
 ## Resources

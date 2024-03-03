@@ -17,6 +17,7 @@ TODO:
   - [Contents](#contents)
   - [Start (vscode)](#start-vscode)
   - [Run tests](#run-tests)
+  - [Stop](#stop)
   - [Resources](#resources)
 
 ## Start (vscode)
@@ -24,7 +25,11 @@ TODO:
 Use the Remote Containers extension and select "Reopen in Container" or...  
 
 ```sh
-devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/01_bash_container/devcontainer.json
+# start devcontainer
+./devcontainerctl.sh -n=07_oh_my_zsh
+
+# start devcontainer (rebuild)
+./devcontainerctl.sh -n=07_oh_my_zsh --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -40,6 +45,13 @@ cd /workspaces/devcontainer_examples
 ```sh
 cd ./07_oh_my_zsh
 echo $DEVCONTAINER_TYPE
+```
+
+## Stop
+
+```sh
+# stop devcontainer
+./devcontainerctl.sh -n=07_oh_my_zsh --down
 ```
 
 ## Resources

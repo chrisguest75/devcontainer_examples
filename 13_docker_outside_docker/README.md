@@ -14,8 +14,14 @@ NOTES:
 
 ## Start (vscode)
 
+Use the Remote Containers extension and select "Reopen in Container" or...  
+
 ```sh
+# start devcontainer
 ./devcontainerctl.sh -n=13_docker_outside_docker
+
+# start devcontainer (rebuild)
+./devcontainerctl.sh -n=13_docker_outside_docker --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -67,6 +73,13 @@ docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --show --ta
 
 # file md5 on the volume
 docker run -i -v 13_docker_outside_docker:/myvolume default_pipeable --md5 --target=/myvolume/random.bin
+```
+
+## Stop
+
+```sh
+# stop devcontainer
+./devcontainerctl.sh -n=13_docker_outside_docker --down
 ```
 
 ## Resources

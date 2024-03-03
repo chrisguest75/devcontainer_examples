@@ -10,8 +10,14 @@ Based on my examples from shell_examples:
 
 ## Start (vscode)
 
+Use the Remote Containers extension and select "Reopen in Container" or...  
+
 ```sh
-devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/06_cpp/devcontainer.json
+# start devcontainer
+./devcontainerctl.sh -n=06_cpp
+
+# start devcontainer (rebuild)
+./devcontainerctl.sh -n=06_cpp --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -25,6 +31,7 @@ cd /workspaces/devcontainer_examples
 ## Run tests
 
 ```sh
+cd ./06_cpp
 cd ./01_helloworld_cmake
 echo $DEVCONTAINER_TYPE
 

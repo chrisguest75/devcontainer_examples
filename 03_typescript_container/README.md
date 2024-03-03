@@ -13,7 +13,11 @@ TODO:
 Use the Remote Containers extension and select "Reopen in Container" or...  
 
 ```sh
-devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/03_typescript_container/devcontainer.json
+# start devcontainer
+./devcontainerctl.sh -n=03_typescript_container
+
+# start devcontainer (rebuild)
+./devcontainerctl.sh -n=03_typescript_container --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -31,6 +35,13 @@ echo $DEVCONTAINER_TYPE
 ```
 
 Goto [03_typescript_container/99_test/TEMPLATE_README.md](03_typescript_container/99_test/TEMPLATE_README.md) and follow the instructions to build and run the code.  
+
+## Stop
+
+```sh
+# stop devcontainer
+./devcontainerctl.sh -n=03_typescript_container --down
+```
 
 ## Resources
 

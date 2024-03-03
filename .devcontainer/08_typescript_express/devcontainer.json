@@ -44,20 +44,20 @@
         "timonwong.shellcheck",
         "DavidAnson.vscode-markdownlint"
       ]
+    },
+    "settings": {
+      "terminal.integrated.profiles.linux": {
+        "zsh": {
+          "path": "/usr/bin/zsh"
+        }
+      },
+      "terminal.integrated.defaultProfile.linux": "zsh"
     }
   },
   "containerEnv": {
     "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
     "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
     "DEVCONTAINER_TYPE": "08_typescript_express"
-  },
-  "settings": {
-    "terminal.integrated.profiles.linux": {
-      "zsh": {
-        "path": "/usr/bin/zsh"
-      }
-    },
-    "terminal.integrated.defaultProfile.linux": "zsh"
   }
   // NOTE: THIS IS NOT WORKING
   // --mount-workspace-git-root false

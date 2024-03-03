@@ -15,7 +15,11 @@ TODO:
 Use the Remote Containers extension and select "Reopen in Container" or...  
 
 ```sh
-devcontainer up --remove-existing-container --build-no-cache --config $(pwd)/.devcontainer/02_powershell_container/devcontainer.json
+# start devcontainer
+./devcontainerctl.sh -n=02_powershell_container
+
+# start devcontainer (rebuild)
+./devcontainerctl.sh -n=02_powershell_container --no-cache
 ```
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
@@ -30,6 +34,13 @@ cd /workspaces/devcontainer_examples
 
 ```sh
 echo $DEVCONTAINER_TYPE
+```
+
+## Stop
+
+```sh
+# stop devcontainer
+./devcontainerctl.sh -n=02_powershell_container --down
 ```
 
 ## Resources
