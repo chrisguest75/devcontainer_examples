@@ -43,8 +43,8 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
   - [06 - cpp example](#06---cpp-example)
   - [07 - oh my zsh](#07---oh-my-zsh)
   - [08 - typescript express](#08---typescript-express)
-  - [09 - docker compose](#09---docker-compose)
   - [10 - terraform](#10---terraform)
+  - [11 - aws posh](#11---aws-posh)
   - [Resources](#resources)
     - [Issues](#issues)
 
@@ -154,15 +154,15 @@ Steps [README.md](./07_oh_my_zsh/README.md)
 Demonstrate a simple typescript application with docker in docker support.  
 Steps [README.md](./08_typescript_express/README.md)  
 
-## 09 - docker compose
-
-Demonstrate using `docker compose` inside a devcontainer.  
-Steps [README.md](./09_docker_compose/README.md)  
-
 ## 10 - terraform
 
 Demonstrate a simple terraform container.  
 Steps [README.md](./10_terraform/README.md)  
+
+## 11 - aws posh
+
+Demonstrate a simple devcontainer with `powershell` and `awscli` added.  
+Steps [README.md](./11_aws_posh/README.md)  
 
 ## Resources
 
