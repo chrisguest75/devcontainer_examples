@@ -1,51 +1,67 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/docker-in-docker
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-in-docker
 {
-  "name": "04_docker_in_docker",
-  "build": {
-    "dockerfile": "../../04_docker_in_docker/.devcontainer/Dockerfile",
-    "context": "../../04_docker_in_docker/.devcontainer",
-    "args": {
-      "UPGRADE_PACKAGES": "true"
-    }
-  },
-  "runArgs": ["--init", "--privileged"],
-  "mounts": ["source=dind-var-lib-docker,target=/var/lib/docker,type=volume"],
-  "overrideCommand": false,
-
-  // Configure tool-specific properties.
-  "customizations": {
-    // Configure properties specific to VS Code.
-    "vscode": {
-      // Add the IDs of extensions you want installed when the container is created.
-      "extensions": [
-        "ms-azuretools.vscode-docker",
-        "ms-vsliveshare.vsliveshare",
-        "oderwat.indent-rainbow",
-        "timonwong.shellcheck",
-        "DavidAnson.vscode-markdownlint",
-        "dbaeumer.vscode-eslint"
-      ]
-    }
-  },
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
-
-  // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "bash /workspaces/devcontainer_examples/04_docker_in_docker/.devcontainer/postCreateCommand.sh",
-
-  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  "remoteUser": "vscode",
-  "features": {
-    "docker-in-docker": "latest",
-    "git": "latest",
-    "github-cli": "latest",
-    "homebrew": "latest"
-  },
-  "containerEnv": {
-    "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
-    "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
-    "DEVCONTAINER_TYPE": "04_docker_in_docker"
-  }
+	"name": "04_docker_in_docker",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/base:bullseye",
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "bash /workspaces/devcontainer_examples/04_docker_in_docker/.devcontainer/postCreateCommand.sh",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-in-docker:2": {
+			"version": "latest",
+			"enableNonRootDocker": "true",
+			"moby": "true",
+			"dockerDashComposeVersion": "v2"
+		},
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"configureZshAsDefaultShell": true,
+			"installZsh": true,
+			"installOhMyZsh": true,
+			"username": "root"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+			"version": "latest"
+		},
+		"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {
+			"version": "latest",
+			"shallowClone": true
+		}
+	},
+	"containerEnv": {
+		"MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
+		"MY_VARIABLE": "${localEnv:MY_VARIABLE}",
+		"DEVCONTAINER_TYPE": "04_docker_in_docker"
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-vsliveshare.vsliveshare",
+				"oderwat.indent-rainbow",
+				"timonwong.shellcheck",
+				"DavidAnson.vscode-markdownlint",
+				"dbaeumer.vscode-eslint",
+				"vivaxy.vscode-conventional-commits"
+			]
+		},
+		"settings": {
+			"terminal.integrated.profiles.linux": {
+				"zsh": {
+					"path": "/usr/bin/zsh"
+				}
+			},
+			"terminal.integrated.defaultProfile.linux": "zsh"
+		}
+	}
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "docker --version",
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }
