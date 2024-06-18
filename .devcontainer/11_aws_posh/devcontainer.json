@@ -41,7 +41,7 @@
   },
   "mounts": [
     {
-      "source": "/Users/${localEnv:USER}/.aws",
+      "source": "${localEnv:HOME}/.aws",
       "target": "/home/vscode/.aws",
       "type": "bind"
     }
@@ -57,7 +57,8 @@
         "oderwat.indent-rainbow",
         "timonwong.shellcheck",
         "DavidAnson.vscode-markdownlint",
-        "ms-vscode.powershell"
+        "ms-vscode.powershell",
+        "vivaxy.vscode-conventional-commits"
       ]
     }
   },
