@@ -8,6 +8,7 @@ Demonstrates:
 * vscode extensions
 * packages installed into the container
 * overriding default shell from bash to zsh
+* has cookiecutter preinstalled
 
 NOTES:
 
@@ -22,7 +23,6 @@ NOTES:
 ## Run tests
 
 ```sh
-brew install cookiecutter
 echo $DEVCONTAINER_TYPE
 
 
