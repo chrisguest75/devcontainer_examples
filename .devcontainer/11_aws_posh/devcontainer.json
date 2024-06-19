@@ -60,21 +60,22 @@
         "ms-vscode.powershell",
         "vivaxy.vscode-conventional-commits"
       ]
+    },
+    "settings": {
+      "terminal.integrated.profiles.linux": {
+        "My Zsh": {
+          "path": "/bin/zsh"
+        }
+      },
+      "terminal.integrated.defaultProfile.linux": "My Zsh"
     }
   },
   "containerEnv": {
     "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
     "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
     "DEVCONTAINER_TYPE": "11_aws_posh"
-  },
-  "settings": {
-    "terminal.integrated.profiles.linux": {
-      "My Zsh": {
-        "path": "/bin/zsh"
-      }
-    },
-    "terminal.integrated.defaultProfile.linux": "My Zsh"
   }
+  
   // NOTE: THIS IS NOT WORKING
   // --mount-workspace-git-root false
   // ,"workspaceMount": "source=${localWorkspaceFolder}/01_bash_container,target=/workspace,type=bind,consistency=cached",
