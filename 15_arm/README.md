@@ -2,7 +2,9 @@
 
 Demonstrate a building a devcontainer in ARM architecture on x86.  
 
-NOTE: THIS IS NOT WORKING ON x86 MAC
+NOTES:
+
+* This is working and builds arm, but some of the tool installation crashes build; curl, git, etc
 
 ## Start (vscode)
 
