@@ -1,0 +1,43 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-mongo
+{
+	"name": "16_node_mongo",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "app",
+	//"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"mongodb.mongodb-vscode",
+				"ms-azuretools.vscode-docker",
+				"ms-vsliveshare.vsliveshare",
+				"oderwat.indent-rainbow",
+				"timonwong.shellcheck",
+				"DavidAnson.vscode-markdownlint",
+				"yzhang.markdown-all-in-one",
+				"vivaxy.vscode-conventional-commits"
+			]
+		}
+	},
+	"containerEnv": {
+	  "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
+	  "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
+	  "DEVCONTAINER_TYPE": "16_node_mongo"
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [3000, 27017]
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

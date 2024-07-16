@@ -1,6 +1,6 @@
 # README
 
-Demonstrate a building a devcontainer in ARM architecture on x86.  
+Demonstrate building a devcontainer in ARM architecture on x86.  
 
 NOTES:
 

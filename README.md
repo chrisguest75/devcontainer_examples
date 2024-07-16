@@ -45,6 +45,10 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
   - [08 - typescript express](#08---typescript-express)
   - [10 - terraform](#10---terraform)
   - [11 - aws posh](#11---aws-posh)
+  - [13 - docker outside docker](#13---docker-outside-docker)
+  - [14 - python pipenv](#14---python-pipenv)
+  - [15 - ARM](#15---arm)
+  - [16 - Node Mongo](#16---node-mongo)
   - [Resources](#resources)
     - [Issues](#issues)
 
@@ -163,6 +167,26 @@ Steps [README.md](./10_terraform/README.md)
 
 Demonstrate a simple devcontainer with `powershell` and `awscli` added.  
 Steps [README.md](./11_aws_posh/README.md)  
+
+## 13 - docker outside docker
+
+Demonstrate a simple devcontainer with docker outside docker.  
+Steps [README.md](./13_docker_outside_docker/README.md)  
+
+## 14 - python pipenv
+
+Demonstrate a simple python container.
+Steps [README.md](./14_python_pipenv/README.md)  
+
+## 15 - ARM
+
+Demonstrate building a devcontainer in ARM architecture on x86.  
+Steps [README.md](./15_arm/README.md)  
+
+## 16 - Node Mongo
+
+Demonstrate building a mongodb devcontainer.  
+Steps [README.md](./16_node_mongo/README.md)  
 
 ## Resources
 
