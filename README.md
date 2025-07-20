@@ -57,6 +57,8 @@ NOTES:
 * ~~Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./devcontainerctl.sh` script.~~
 * You can now very easily use the Remote Containers extension to open the containers.  
 * If you don't map the `.git` folder then you can't use codespaces to change and commit.  
+* There is a nix feature to use instead of brew on arm.
+* `uv` can be installed through nix
 
 ## Getting started
 

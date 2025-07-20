@@ -20,7 +20,7 @@
 			"enableShared": true,
 			"version": "3.11"
 		},
-		"ghcr.io/devcontainers-contrib/features/pipenv:2": {
+		"ghcr.io/devcontainers-extra/features/pipenv:2": {
 			"version": "latest"
 		},
 	  "ghcr.io/devcontainers/features/common-utils:2": {
