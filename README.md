@@ -52,19 +52,6 @@ Based on my examples from docker_examples [41_remote_containers](https://github.
   - [Resources](#resources)
     - [Issues](#issues)
 
-TODO:
-
-* Where is the .dockerignore rooted?
-* A custom devcontainer feature https://github.com/devcontainers/feature-starter (maybe my niceprompt example)
-* terraform
-* Ability to clone other repos into the workspace
-* Build github actions for each container
-* Setup my dotfiles in a remote container
-* Sharing credentials https://code.visualstudio.com/docs/remote/containers#_sharing-git-credentials-with-your-container
-* docker caching - to speed up build
-* build a custom powershell jupyter build container
-* Configure different users.
-
 NOTES:
 
 * ~~Currently `vscode` does not support the nested indirect devcontainers.  Follow example [01_bash_container/README.md](./01_bash_container/README.md) using the cli to build start and attach.  Or use the `./devcontainerctl.sh` script.~~
