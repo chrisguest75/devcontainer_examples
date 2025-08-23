@@ -20,9 +20,11 @@
   "features": {
     "ghcr.io/devcontainers-extra/features/firebase-cli": {
       "version": "latest",
-
     },
     "ghcr.io/dhoeric/features/google-cloud-cli": {
+      "version": "latest"
+    },
+    "ghcr.io/roul/devcontainer-features/bitwarden-cli": {
       "version": "latest"
     }
   },

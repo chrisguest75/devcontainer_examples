@@ -180,6 +180,7 @@ Steps [README.md](./16_node_mongo/README.md)
 ## Resources
 
 * [containers.dev](https://containers.dev/)
+* Containers Features [here](https://containers.dev/features)
 * devcontainers.json [json_reference](https://containers.dev/implementors/json_reference/)
 * manekinekko/awesome-devcontainers repo [here](https://github.com/manekinekko/awesome-devcontainers)  
 * Available Dev Container Features [here](https://containers.dev/features)  
