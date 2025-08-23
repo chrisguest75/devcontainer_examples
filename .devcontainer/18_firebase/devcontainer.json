@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.238.0/containers/ubuntu
+{
+  "name": "18_firebase",
+  "build": {
+    "dockerfile": "../../18_firebase/.devcontainer/Dockerfile",
+    "context": "../../18_firebase/.devcontainer",
+    // Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
+    // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
+    "args": { "VARIANT": "ubuntu-24.04" }
+  },
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "bash /workspaces/devcontainer_examples/18_firebase/.devcontainer/postCreateCommand.sh",
+	"runArgs": ["--platform=linux/arm64" ],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "vscode",
+  "features": {
+  },
+  // Configure tool-specific properties.
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-vsliveshare.vsliveshare",
+        "oderwat.indent-rainbow",
+        "timonwong.shellcheck",
+        "DavidAnson.vscode-markdownlint",
+        "vivaxy.vscode-conventional-commits"
+      ]
+    },
+    "codespaces": {
+      "repositories": {
+        "chrisguest75/shell_examples": {
+          "permissions": "read-all"
+        },
+        "chrisguest75/typescript_examples": {
+          "permissions": "read-all"
+        },
+        "chrisguest75/docker_examples": {
+          "permissions": "read-all"
+        }
+      }
+    },
+    "settings": {
+      "terminal.integrated.profiles.linux": {
+        "My Bash": {
+          "path": "/bin/bash"
+        }
+      },
+      "terminal.integrated.defaultProfile.linux": "My Bash"
+    }
+  },
+  "containerEnv": {
+    "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
+    "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
+    "DEVCONTAINER_TYPE": "18_firebase"
+  }
+  // NOTE: THIS IS NOT WORKING
+  // --mount-workspace-git-root false
+  // ,"workspaceMount": "source=${localWorkspaceFolder}/01_bash_container,target=/workspace,type=bind,consistency=cached",
+  // "workspaceFolder": "/workspace"
+}
