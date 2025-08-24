@@ -24,9 +24,7 @@
     "ghcr.io/dhoeric/features/google-cloud-cli": {
       "version": "latest"
     },
-    "ghcr.io/roul/devcontainer-features/bitwarden-cli": {
-      "version": "latest"
-    }
+    "ghcr.io/devcontainers/features/node:1": {}
   },
   // Configure tool-specific properties.
   "customizations": {
