@@ -1,0 +1,40 @@
+#!/usr/bin/env just --justfile
+# ^ A shebang isn't required, but allows a justfile to be executed
+#   like a script, with `./justfile test`, for example.
+
+set dotenv-load := true
+
+# default lists actions
+default:
+  @just -f justfile --list
+
+
+clean:
+  rm -rf ./build || true
+
+clean-all:
+  rm -rf ./build || true
+  rm -rf ./node_modules || true
+
+nix:
+  #!/usr/bin/env bash
+  set -xeufo pipefail
+  nix develop --command zsh 
+
+
+install:
+  #!/usr/bin/env bash
+  set -xeufo pipefail
+  npm install
+
+test:
+  #!/usr/bin/env bash
+  set -xeufo pipefail
+  npx playwright test
+  npx playwright show-report --host 0.0.0.0 --port 9323
+
+report options="":
+  #!/usr/bin/env bash
+  set -xeufo pipefail
+  npx playwright show-report {{options}}
+  
