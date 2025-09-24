@@ -31,10 +31,9 @@ test:
   #!/usr/bin/env bash
   set -xeufo pipefail
   npx playwright test
-  npx playwright show-report --host 0.0.0.0 --port 9323
 
-report options="":
+report: test
   #!/usr/bin/env bash
   set -xeufo pipefail
-  npx playwright show-report {{options}}
+  npx playwright show-report --host 0.0.0.0 --port 9323
   
