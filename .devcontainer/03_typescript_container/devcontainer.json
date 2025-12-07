@@ -30,17 +30,6 @@
       ]
     },
     "codespaces": {
-      "repositories": {
-        "chrisguest75/shell_examples": {
-          "permissions": "read-all"
-        },
-        "chrisguest75/typescript_examples": {
-          "permissions": "read-all"
-        },
-        "chrisguest75/docker_examples": {
-          "permissions": "read-all"
-        }
-      }
     }
   },
 
@@ -53,11 +42,11 @@
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/devcontainers/features/git:1": {
       "version": "latest"
-    },
-    "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {
+    }
+    /*"ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {
       "version": "latest",
       "shallowClone": true
-    }
+    }*/
   },
 
   "containerEnv": {
