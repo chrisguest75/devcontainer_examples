@@ -18,7 +18,8 @@
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers-extra/features/gh-cli:1": {}
   },
   // Configure tool-specific properties.
   "customizations": {
@@ -45,6 +46,13 @@
       "terminal.integrated.defaultProfile.linux": "My Bash"
     }
   },
+  "mounts": [
+    {
+      "source": "${localEnv:HOME}/.config/gh",
+      "target": "/home/vscode/.config/gh",
+      "type": "bind"
+    }
+  ],
   "containerEnv": {
     "MY_TEST_SECRET": "${localEnv:TEST_SECRET}",
     "MY_VARIABLE": "${localEnv:MY_VARIABLE}",
