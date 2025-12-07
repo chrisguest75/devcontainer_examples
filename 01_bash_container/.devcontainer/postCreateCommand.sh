@@ -3,4 +3,6 @@ echo "executing postCreateCommand.sh"
 echo "uname: $(uname -a)"
 echo "whoami: $(whoami)"
 
-brew install bats-core
+#brew install bats-core
+sudo apt update && apt install -y bats
+echo "bats version: $(bats --version)"
