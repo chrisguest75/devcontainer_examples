@@ -18,23 +18,17 @@ Use the Remote Containers extension and select "Reopen in Container" or...
 ## Renovate
 
 ```sh
-unset RENOVATE_CONFIG_FILE
-export RENOVATE_TOKEN=$(gh auth token)
-LOG_LEVEL=debug RENOVATE_PLATFORM=local renovate
-
-
-
-LOG_LEVEL=debug RENOVATE_PLATFORM=local RENOVATE_TOKEN=dummy npx --yes renovate
-
+# get the token on the host and copy it into devcontainer
 export RENOVATE_TOKEN=$(gh auth token)
 env | sort
+
+# look at suggested upgrades
 LOG_LEVEL=debug RENOVATE_PLATFORM=local npx --yes renovate
 
-
+# raise PR
 export RENOVATE_REPOSITORIES="chrisguest75/devcontainer_examples"
 LOG_LEVEL=debug npx --yes renovate
 ```
-
 
 ## Resources
 
