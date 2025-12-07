@@ -10,5 +10,14 @@ NOTES:
 
 Use the Remote Containers extension and select "Reopen in Container" or...  
 
+## Renovate
+
+```sh
+unset RENOVATE_CONFIG_FILE
+export RENOVATE_TOKEN=$(gh auth token)
+LOG_LEVEL=debug RENOVATE_PLATFORM=local renovate
+```
+
+
 ## Resources
 
