@@ -2,7 +2,6 @@
 
 * Where is the .dockerignore rooted?
 * A custom devcontainer feature https://github.com/devcontainers/feature-starter (maybe my niceprompt example)
-* terraform
 * Ability to clone other repos into the workspace
 * Build github actions for each container
 * Setup my dotfiles in a remote container
