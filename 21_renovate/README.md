@@ -17,6 +17,14 @@ Use the Remote Containers extension and select "Reopen in Container" or...
 
 ## Renovate
 
+Validate the configuration
+
+```sh
+npx --yes --package renovate -- renovate-config-validator --strict
+```
+
+Detect out-of-date components.
+
 ```sh
 # get the token on the host and copy it into devcontainer
 export RENOVATE_TOKEN=$(gh auth token)
