@@ -21,3 +21,8 @@ cd ..
 echo $MY_ENVIRONMENT_VARIABLE
 echo $ENVIRONMENT1
 ```
+
+## Resources
+
+* https://containers.dev/implementors/spec/
+* https://direnv.net/

@@ -11,7 +11,6 @@
 * Configure different users.
 
 
-* ghcli
 * golang
 * tenv - auth key
-* direnv
+* ghcli - can I pass in the auth token?

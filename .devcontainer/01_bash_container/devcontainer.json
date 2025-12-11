@@ -9,6 +9,7 @@
     // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
     "args": { "VARIANT": "ubuntu-22.04" }
   },
+  "initializeCommand": "01_bash_container/.devcontainer/initializeCommand.sh",
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "bash /workspaces/devcontainer_examples/01_bash_container/.devcontainer/postCreateCommand.sh",
 	"runArgs": ["--platform=linux/arm64" ],
@@ -37,7 +38,8 @@
         "ms-vsliveshare.vsliveshare",
         "oderwat.indent-rainbow",
         "timonwong.shellcheck",
-        "DavidAnson.vscode-markdownlint"
+        "DavidAnson.vscode-markdownlint",
+        "vivaxy.vscode-conventional-commits"
       ]
     },
     "codespaces": {

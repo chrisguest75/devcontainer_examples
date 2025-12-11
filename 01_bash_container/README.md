@@ -48,12 +48,17 @@ cd ./18_bats_mock
 ## GH CLI auth
 
 ```sh
+# using the .envrc that is created by the initialise command
+. ./.envrc
+gh repo list
+
 # on host
 export GITHUB_TOKEN=$(gh auth token)
 
 # in devcontainer
 export GITHUB_TOKEN=...
 echo "$GITHUB_TOKEN" | gh auth login --with-token
+gh repo list
 ```
 
 ## Resources

@@ -17,6 +17,5 @@ Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
 
 ## Resources
 
-* https://taskfile.dev/
 * https://containers.dev/implementors/spec/
 * https://direnv.net/
