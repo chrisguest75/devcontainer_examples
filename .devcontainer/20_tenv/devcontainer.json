@@ -9,9 +9,10 @@
     // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
     "args": { "VARIANT": "ubuntu-24.04" }
   },
+  "initializeCommand": ".devcontainer/20_tenv/initializeCommand.sh",
   // Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "bash .devcontainer/20_tenv/postCreateCommand.sh",
-  "runArgs": ["--platform=linux/amd64" ],
+  "runArgs": ["--platform=linux/arm64" ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
@@ -55,7 +56,8 @@
         "timonwong.shellcheck",
         "DavidAnson.vscode-markdownlint",
         "hashicorp.terraform",
-        "hashicorp.hcl"
+        "hashicorp.hcl",
+        "vivaxy.vscode-conventional-commits"        
       ]
     },
     "settings": {

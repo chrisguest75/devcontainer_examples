@@ -2,7 +2,7 @@
 
 # [Choice] Ubuntu version (use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon): ubuntu-22.04, ubuntu-20.04, ubuntu-18.04
 ARG VARIANT="jammy"
-FROM --platform=amd64 mcr.microsoft.com/devcontainers/base:${VARIANT}
+FROM --platform=linux/arm64 mcr.microsoft.com/devcontainers/base:${VARIANT}
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

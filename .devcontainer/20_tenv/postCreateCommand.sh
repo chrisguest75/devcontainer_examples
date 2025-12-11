@@ -6,6 +6,8 @@ echo "uname: $(uname -a)"
 echo "whoami: $(whoami)"
 echo "TERRAFORM_VERSION:${TERRAFORM_VERSION}"
 
+. ./.envrc
+
 env | sort
 
 sed -i.bak "s/ZSH_THEME=\"codespaces\"/ZSH_THEME=\"robbyrussell\"/g" /root/.zshrc
@@ -28,25 +30,12 @@ echo "tenv installed: $(tenv --version)"
 
 # Install and setup Terraform with tenv
 echo "Installing Terraform via tenv..."
-tenv tf install latest
-tenv tf use latest
-TF_VERSION=$(cat ~/.tenv/Terraform/version)
-ln -sf ~/.tenv/Terraform/"$TF_VERSION"/terraform /usr/local/bin/terraform
-echo "Terraform installed: $(terraform --version)"
-
-# Install and setup Terragrunt with tenv
-echo "Installing Terragrunt via tenv..."
-if tenv tg install latest && tenv tg use latest; then
-    TG_VERSION=$(cat ~/.tenv/Terragrunt/version)
-    ln -sf ~/.tenv/Terragrunt/"$TG_VERSION"/terragrunt /usr/local/bin/terragrunt
-    echo "Terragrunt installed: $(terragrunt --version)"
-else
-    echo "Warning: Terragrunt installation failed (likely GitHub rate limit). Skipping..."
-fi
+tenv tf install 1.14.1
+tenv tg install 0.94.0
 
 # Install Taskfile (Task)
 echo "Installing Taskfile..."
-TASK_VERSION=$(curl -s https://api.github.com/repos/go-task/task/releases/latest | grep '"tag_name":' | cut -d '"' -f 4)
+TASK_VERSION=v3.45.5
 if [ -n "$TASK_VERSION" ]; then
     TMP_DIR=$(mktemp -d)
     cd "$TMP_DIR" || exit 1
@@ -65,6 +54,7 @@ if [ -n "$TASK_VERSION" ]; then
 else
     echo "Warning: Could not determine Taskfile version. Skipping..."
 fi
+
 
 # Configure development environment
 echo "Configuring development environment..."

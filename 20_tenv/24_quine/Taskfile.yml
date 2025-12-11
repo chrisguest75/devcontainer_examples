@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  init:
+    desc: 'Init'
+    cmds: 
+      - terraform init
+
+  plan:
+    desc: 'Plan'
+    cmds: 
+      - terraform plan
+
+  apply:
+    desc: 'Apply'
+    cmds: 
+      - terraform apply
