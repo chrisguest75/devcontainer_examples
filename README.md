@@ -15,6 +15,9 @@ code --install-extension vivaxy.vscode-conventional-commits
 
 # install hooks
 pre-commit install --hook-type commit-msg --hook-type pre-push
+
+# run against all files
+pre-commit run --all-files
 ```
 
 [![Repository](https://skillicons.dev/icons?i=docker,bash,linux)](https://skillicons.dev)
