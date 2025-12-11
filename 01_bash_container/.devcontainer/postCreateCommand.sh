@@ -4,5 +4,5 @@ echo "uname: $(uname -a)"
 echo "whoami: $(whoami)"
 
 #brew install bats-core
-sudo apt update && apt install -y bats
+sudo apt update && sudo apt install -y bats
 echo "bats version: $(bats --version)"

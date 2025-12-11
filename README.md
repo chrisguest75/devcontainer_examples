@@ -70,13 +70,6 @@ code --install-extension ms-vscode-remote.remote-containers
 * Use `⌘ + ^ + p` and "Try a development Container Sample"
 * Use `⌘ + ^ + p` and "Add development container configuration files"
 
-Select Ubuntu and follow options
-
-```sh
-nvm use
-npm install -g @devcontainers/cli
-```
-
 ```sh
 # github codespaces extension
 code --install-extension GitHub.codespaces
@@ -96,16 +89,6 @@ gh codespace list
 ## Run & Stop
 
 * Use `⌘ + ^ + p` and "Dev containers: Rebuild and reopen in a container"  
-
-or use CLI  
-
-```sh
-# start bash devcontainer
-./devcontainerctl.sh -n=01_bash_container --no-cache
-
-# stop bash devcontainer
-./devcontainerctl.sh -n=01_bash_container --down
-```
 
 ## 01 - bash development example
 

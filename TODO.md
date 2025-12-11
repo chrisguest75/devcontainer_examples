@@ -9,3 +9,9 @@
 * docker caching - to speed up build
 * build a custom powershell jupyter build container
 * Configure different users.
+
+
+* ghcli
+* golang
+* tenv - auth key
+* direnv
