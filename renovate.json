@@ -1,59 +1,40 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Central Renovate configuration for devcontainer_examples.",
   "extends": [
     "config:recommended",
-    ":semanticCommits"
+    "security:openssf-scorecard"
   ],
-  "timezone": "UTC",
-  "prHourlyLimit": 2,
-  "prConcurrentLimit": 10,
-  "rebaseWhen": "conflicted",
-  "dependencyDashboardAutoclose": true,
+
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+
+  "osvVulnerabilityAlerts": true,
+  "dependencyDashboardOSVVulnerabilitySummary": "all",
+  "addLabels": [
+    "renovate",
+    "{{{manager}}}"
+  ],
   "packageRules": [
     {
       "matchManagers": [
-        "github-actions"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "automerge": true,
-      "automergeType": "pr",
-      "labels": [
-        "dependencies",
-        "github-actions"
-      ]
-    },
-    {
-      "matchManagers": [
-        "npm"
-      ],
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ],
-      "groupName": "npm dependencies",
-      "labels": [
-        "dependencies",
-        "npm"
-      ],
-      "minimumReleaseAge": "2 days"
-    },
-    {
-      "matchManagers": [
         "dockerfile",
-        "devcontainer"
+        "github-actions"
       ],
-      "groupName": "container base images",
-      "labels": [
-        "dependencies",
-        "containers"
+      "pinDigests": true
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "(^|/)Dockerfile$",
+        "(^|/)Dockerfile$.*"
       ],
-      "schedule": [
-        "after 1am on saturday"
-      ]
+      "matchStrings": [
+        "renovate: datasource=(?<datasource>.*?) depName=(?<depName>\\S*)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\nARG .*?_VERSION=(?<currentValue>.*)\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}",
+      "extractVersionTemplate": "{{#if (equals extractVersion 'true')}}^v(?<version>\\S+){{/if}}"
     }
   ]
 }

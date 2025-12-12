@@ -6,6 +6,12 @@ echo "whoami: $(whoami)"
 cat /proc/version
 lscpu
 
+# install pre-commit
+uv tool install pre-commit
+
+# shellcheck source=/dev/null
+. "21_renovate/config/.devcontainer.env"
+
 . ${NVM_DIR}/nvm.sh && nvm install --lts
 
 npm install -g renovate

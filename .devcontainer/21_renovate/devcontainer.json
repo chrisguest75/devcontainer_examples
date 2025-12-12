@@ -3,14 +3,16 @@
 {
   "name": "21_renovate",
   "build": {
-    "dockerfile": "../../21_renovate/.devcontainer/Dockerfile",
-    "context": "../../21_renovate/.devcontainer",
+    "dockerfile": "Dockerfile",
+    "context": ".",
     // Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
     // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
     "args": { "VARIANT": "ubuntu-24.04" }
   },
+  "initializeCommand": ".devcontainer/21_renovate/initializeCommand.sh",
+
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "bash /workspaces/devcontainer_examples/21_renovate/.devcontainer/postCreateCommand.sh",
+  "postCreateCommand": "bash .devcontainer/21_renovate/postCreateCommand.sh",
 	"runArgs": ["--platform=linux/arm64" ],
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
@@ -18,8 +20,18 @@
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
   "remoteUser": "vscode",
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers-extra/features/gh-cli:1": {}
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers-extra/features/gh-cli:1": {
+      "version": "latest"
+    },
+    "ghcr.io/guiyomh/features/just:0": {
+      "version": "latest"
+    },
+    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {
+      "version": "latest"
+    }
   },
   // Configure tool-specific properties.
   "customizations": {
