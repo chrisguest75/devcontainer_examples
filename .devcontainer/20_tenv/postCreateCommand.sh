@@ -1,12 +1,13 @@
 #!/bin/bash/env bash
 echo "Executing postCreateCommand.sh"
 
-sudo apt update 
+sudo apt update
 echo "uname: $(uname -a)"
 echo "whoami: $(whoami)"
 echo "TERRAFORM_VERSION:${TERRAFORM_VERSION}"
 
-. 20_tenv/config/.devcontainer.env
+# shellcheck source=/dev/null
+. "20_tenv/config/.devcontainer.env"
 
 env | sort
 
@@ -70,7 +71,7 @@ tenv-use-tf() {
         echo "Example: tenv-use-tf 1.6.0"
         return 1
     fi
-    
+
     echo "Installing and switching to Terraform $1..."
     tenv tf install "$1" && tenv tf use "$1"
     TF_VERSION=$(cat ~/.tenv/Terraform/version)
@@ -84,7 +85,7 @@ tenv-use-tg() {
         echo "Example: tenv-use-tg v0.53.0"
         return 1
     fi
-    
+
     echo "Installing and switching to Terragrunt $1..."
     tenv tg install "$1" && tenv tg use "$1"
     TG_VERSION=$(cat ~/.tenv/Terragrunt/version)
@@ -123,4 +124,4 @@ echo "  - tf-available           # List available Terraform versions"
 echo "  - tg-versions            # List installed Terragrunt versions"
 echo "  - tg-available           # List available Terragrunt versions"
 
-#brew install tenv taskfile 
+#brew install tenv taskfile

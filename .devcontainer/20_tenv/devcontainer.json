@@ -7,7 +7,7 @@
     "context": ".",
     // Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
     // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
-    "args": { 
+    "args": {
       "VARIANT": "ubuntu-24.04",
       "USERNAME": "${localEnv:USER}"
     }
@@ -40,7 +40,7 @@
     },
     "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {
       "version": "latest"
-    }    
+    }
   },
   /*"mounts": [
     {
@@ -61,7 +61,7 @@
         "DavidAnson.vscode-markdownlint",
         "hashicorp.terraform",
         "hashicorp.hcl",
-        "vivaxy.vscode-conventional-commits"        
+        "vivaxy.vscode-conventional-commits"
       ]
     },
     "settings": {

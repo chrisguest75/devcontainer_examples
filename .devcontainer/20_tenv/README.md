@@ -1,11 +1,11 @@
 # README
 
-Demonstrate a devcontainer for tenv.  
+Demonstrate a devcontainer for tenv.
 
 Demonstrates:
 
 * Using features
-* It seems to be much quicker to build.  
+* It seems to be much quicker to build.
 
 - [README](#readme)
   - [Start (vscode)](#start-vscode)
@@ -21,4 +21,3 @@ Steps [20_tenv/README.md](../../20_tenv/README.md)
 
 * https://taskfile.dev/
 * https://github.com/tofuutils/tenv
-
