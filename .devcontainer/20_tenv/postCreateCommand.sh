@@ -1,18 +1,19 @@
 #!/bin/bash/env bash
 echo "Executing postCreateCommand.sh"
 
-apt update 
+sudo apt update 
 echo "uname: $(uname -a)"
 echo "whoami: $(whoami)"
 echo "TERRAFORM_VERSION:${TERRAFORM_VERSION}"
 
-. ./.envrc
+. 20_tenv/config/.devcontainer.env
 
 env | sort
 
 sed -i.bak "s/ZSH_THEME=\"codespaces\"/ZSH_THEME=\"robbyrussell\"/g" /root/.zshrc
 sed -i.bak "s/ZSH_THEME=\"codespaces\"/ZSH_THEME=\"robbyrussell\"/g" ~/.zshrc
 
+# install pre-commit
 uv tool install pre-commit
 
 # Install tenv
@@ -22,8 +23,8 @@ TMP_DIR=$(mktemp -d)
 cd "$TMP_DIR" || exit 1
 wget -q "https://github.com/tofuutils/tenv/releases/download/${TENV_VERSION}/tenv_${TENV_VERSION}_Linux_x86_64.tar.gz"
 tar -xzf "tenv_${TENV_VERSION}_Linux_x86_64.tar.gz"
-mv tenv /usr/local/bin/
-chmod +x /usr/local/bin/tenv
+chmod +x tenv
+sudo mv tenv /usr/local/bin/
 cd - > /dev/null || exit 1
 rm -rf "$TMP_DIR"
 echo "tenv installed: $(tenv --version)"

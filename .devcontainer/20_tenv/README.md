@@ -15,6 +15,8 @@ Demonstrates:
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
 
+Steps [20_tenv/README.md](../../20_tenv/README.md)
+
 ## Resources
 
 * https://taskfile.dev/

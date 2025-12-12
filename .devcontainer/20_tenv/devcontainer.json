@@ -7,7 +7,10 @@
     "context": ".",
     // Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
     // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
-    "args": { "VARIANT": "ubuntu-24.04" }
+    "args": { 
+      "VARIANT": "ubuntu-24.04",
+      "USERNAME": "${localEnv:USER}"
+    }
   },
   "initializeCommand": ".devcontainer/20_tenv/initializeCommand.sh",
   // Use 'postCreateCommand' to run commands after the container is created.
@@ -17,15 +20,14 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   // "forwardPorts": [],
 
-  "containerUser": "root",
   // Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  "remoteUser": "root",
+  "remoteUser": "${localEnv:USER}",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {
       "configureZshAsDefaultShell": true,
       "installZsh": true,
       "installOhMyZsh": true,
-      "username": "root"
+      "username": "${localEnv:USER}"
     },
     "ghcr.io/devcontainers/features/git:1": {
       "version": "latest"
@@ -36,7 +38,9 @@
     "ghcr.io/devcontainers-extra/features/firebase-cli": {
       "version": "latest"
     },
-    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {}    
+    "ghcr.io/jsburckhardt/devcontainer-features/uv:1": {
+      "version": "latest"
+    }    
   },
   /*"mounts": [
     {

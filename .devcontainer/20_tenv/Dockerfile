@@ -4,6 +4,11 @@
 ARG VARIANT="jammy"
 FROM --platform=linux/arm64 mcr.microsoft.com/devcontainers/base:${VARIANT}
 
+ARG USERNAME=vscode
+RUN if ! id -u $USERNAME > /dev/null 2>&1; then \
+        useradd -m -s /bin/bash $USERNAME; \
+    fi
+
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
      && apt-get -y install --no-install-recommends shellcheck locales curl

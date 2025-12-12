@@ -4,4 +4,5 @@ echo "uname: $(uname -a)"
 echo "whoami: $(whoami)"
 
 pwd
-echo "export GITHUB_TOKEN=$(gh auth token)" > .envrc
+mkdir -p 01_bash_container/config
+echo "export GITHUB_TOKEN=$(gh auth token)" > 01_bash_container/config/.devcontainer.env

@@ -49,7 +49,7 @@ cd ./18_bats_mock
 
 ```sh
 # using the .envrc that is created by the initialise command
-. ./.envrc
+. 01_bash_container/config/.devcontainer.env
 gh repo list
 
 # on host
