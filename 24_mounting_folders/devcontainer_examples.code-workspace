@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../python_examples"
+		}
+	],
+	"settings": {
+		"conventionalCommits.autoCommit": false
+	}
+}
