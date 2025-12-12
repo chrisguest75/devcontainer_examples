@@ -12,7 +12,8 @@ uv tool install pre-commit
 # shellcheck source=/dev/null
 . "21_renovate/config/.devcontainer.env"
 
-. ${NVM_DIR}/nvm.sh && nvm install --lts
+# shellcheck source=/dev/null
+. "${NVM_DIR}/nvm.sh" && nvm install --lts
 
 npm install -g renovate
 
