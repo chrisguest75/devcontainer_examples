@@ -43,8 +43,8 @@ if [ -n "$TASK_VERSION" ]; then
     cd "$TMP_DIR" || exit 1
     if wget -q "https://github.com/go-task/task/releases/download/${TASK_VERSION}/task_linux_amd64.tar.gz"; then
         tar -xzf "task_linux_amd64.tar.gz"
-        mv task /usr/local/bin/
-        chmod +x /usr/local/bin/task
+        chmod +x task
+        sudo mv task /usr/local/bin/
         cd - > /dev/null || exit 1
         rm -rf "$TMP_DIR"
         echo "Taskfile installed: $(task --version)"
