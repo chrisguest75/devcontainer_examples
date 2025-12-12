@@ -7,8 +7,8 @@
     "context": ".",
     // Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
     // Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
-    "args": { 
-      "VARIANT": "ubuntu-24.04", 
+    "args": {
+      "VARIANT": "ubuntu-24.04",
       "USERNAME": "${localEnv:USER}"
     }
   },
@@ -45,7 +45,7 @@
       "target": "/workspaces/python_examples",
       "type": "bind"
     }
-  ],  
+  ],
   // Configure tool-specific properties.
   "customizations": {
     // Configure properties specific to VS Code.

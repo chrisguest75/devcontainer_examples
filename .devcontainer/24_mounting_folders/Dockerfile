@@ -11,12 +11,12 @@ RUN if ! id -u $USERNAME > /dev/null 2>&1; then \
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-     && apt-get -y install --no-install-recommends locales curl
+     && apt-get -y install --no-install-recommends locales curl shellcheck
 
-RUN locale-gen en_US.UTF-8  
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
-ENV LC_ALL en_US.UTF-8  
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
 
 ENTRYPOINT ["/bin/zsh"]
 CMD ["/bin/zsh"]
