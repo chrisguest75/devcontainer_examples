@@ -1,13 +1,13 @@
-# README
+# CACHING FEATURES
 
-Demonstrate a devcontainer for SOPS.
+Demonstrate a devcontainer for tenv.
 
 Demonstrates:
 
 * Using features
 * It seems to be much quicker to build.
 
-- [README](#readme)
+- [CACHING FEATURES](#caching-features)
   - [Start (vscode)](#start-vscode)
   - [Resources](#resources)
 
@@ -15,7 +15,9 @@ Demonstrates:
 
 Use `⌘ + ^ + p` and "Dev Containers: Attach to a running container"
 
+Steps [20_tenv/README.md](../../20_tenv/README.md)
+
 ## Resources
 
-* https://containers.dev/implementors/spec/
-* https://direnv.net/
+* https://taskfile.dev/
+* https://github.com/tofuutils/tenv
