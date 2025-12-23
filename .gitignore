@@ -2,3 +2,4 @@
 .env
 .devcontainer.env
 .venv
+.config

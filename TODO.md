@@ -10,5 +10,3 @@
 * Configure different users.
 
 
-* tenv - auth key
-* ghcli - can I pass in the auth token?
