@@ -6,7 +6,7 @@ NOTES:
 
 * This is for testing MCP whilst limiting the blast radius if something goes wrong.
 * It will open a chrome browser up.
-* Chrome is still running for the host and is in the host filesystem.  
+* Chrome is still running for the host and is in the host filesystem.
 
 ## Steps
 

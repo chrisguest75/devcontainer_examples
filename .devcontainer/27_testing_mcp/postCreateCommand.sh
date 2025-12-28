@@ -15,5 +15,3 @@ sed -i.bak "s/ZSH_THEME=\"codespaces\"/ZSH_THEME=\"robbyrussell\"/g" ~/.zshrc
 
 # install pre-commit
 uv tool install pre-commit
-
-
