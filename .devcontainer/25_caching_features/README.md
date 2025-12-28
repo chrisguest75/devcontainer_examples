@@ -6,7 +6,7 @@ Demonstrates:
 
 * Using features
 * It seems to be much quicker to build.
-* It uses a feature local to the repo.  
+* It uses a feature local to the repo.
 
 - [CACHING FEATURES](#caching-features)
   - [Start (vscode)](#start-vscode)

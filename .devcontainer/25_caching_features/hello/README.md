@@ -4,11 +4,11 @@ A hello world feature
 
 TODO:
 
-* Push the image to repository.  
+* Push the image to repository.
 
 NOTES:
 
-* It seems you cannot use the local docker registry.  
+* It seems you cannot use the local docker registry.
 
 ## Example Usage
 

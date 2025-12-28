@@ -6,4 +6,3 @@ echo "whoami: $(whoami)"
 
 # shellcheck source=/dev/null
 . "25_caching_features/.config/.devcontainer.env"
-

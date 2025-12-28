@@ -19,4 +19,3 @@ dive:
   set -eufo pipefail
 
   dive devcontainer-feature/hello:1
-  
