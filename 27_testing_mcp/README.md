@@ -25,3 +25,4 @@ To test it is working.
 ## Resources
 
 * https://github.com/ChromeDevTools/chrome-devtools-mcp
+* https://mcpservers.org/
