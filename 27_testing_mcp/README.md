@@ -10,6 +10,13 @@ NOTES:
 
 ## Steps
 
+* Search extensions @mcp
+* Install "io.github.ChromeDevTools/chrome-devtools-mcp"
+
+## Prompts
+
+To test it is working.  
+
 * "Check the performance of https://developers.chrome.com"
 * "what is the root of the filesystem?"
 * "take a screenshot and place in /workspaces/devcontainer_examples/27_testing_mcp folder"
