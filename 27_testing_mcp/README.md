@@ -26,3 +26,4 @@ To test it is working.
 
 * https://github.com/ChromeDevTools/chrome-devtools-mcp
 * https://mcpservers.org/
+* https://code.visualstudio.com/docs/copilot/customization/mcp-servers

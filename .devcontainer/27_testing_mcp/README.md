@@ -20,3 +20,4 @@ Steps [27_testing_mcp/README.md](../../27_testing_mcp/README.md)
 ## Resources
 
 * https://taskfile.dev/
+* https://code.visualstudio.com/docs/copilot/customization/mcp-servers
