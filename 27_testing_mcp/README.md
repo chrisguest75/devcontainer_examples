@@ -15,7 +15,7 @@ NOTES:
 
 ## Prompts
 
-To test it is working.  
+To test it is working.
 
 * "Check the performance of https://developers.chrome.com"
 * "what is the root of the filesystem?"
