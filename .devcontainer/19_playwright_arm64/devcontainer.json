@@ -24,7 +24,7 @@
       "installOhMyZsh": true,
       "username": "vscode"
     },    
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "version": "v20.19.0"
     },
     "ghcr.io/guiyomh/features/just:0": {},

@@ -24,7 +24,7 @@
     "ghcr.io/dhoeric/features/google-cloud-cli": {
       "version": "latest"
     },
-    "ghcr.io/devcontainers/features/node:1": {}
+    "ghcr.io/devcontainers/features/node:2": {}
   },
   // Configure tool-specific properties.
   "customizations": {
